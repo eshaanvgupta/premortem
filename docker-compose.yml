@@ -1,0 +1,21 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_BSC_RPC_URL: ${NEXT_PUBLIC_BSC_RPC_URL:-https://bsc-dataseed-public.bnbchain.org}
+        NEXT_PUBLIC_CHAIN_ID: '56'
+        NEXT_PUBLIC_AGENT_ID_REGISTRY: '0x60b9262456de011f7d15a54cdd8c48baaa8b022f'
+        NEXT_PUBLIC_PREMORTEM_REGISTRY: ${NEXT_PUBLIC_PREMORTEM_REGISTRY:-}
+        NEXT_PUBLIC_PREMORTEM_CODE_HASH: ${NEXT_PUBLIC_PREMORTEM_CODE_HASH:-}
+        NEXT_PUBLIC_DEPLOYMENT_BLOCK: ${NEXT_PUBLIC_DEPLOYMENT_BLOCK:-}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-}
+    ports:
+      - '127.0.0.1:3000:3000'
+    restart: unless-stopped
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    # The container receives no signer key, wallet credentials or API secret.

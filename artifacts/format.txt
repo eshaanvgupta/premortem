@@ -1,0 +1,109 @@
+.github/workflows/ci.yml 21ms (unchanged)
+.prettierrc.json 12ms (unchanged)
+apps/web/app/api/health/route.ts 20ms (unchanged)
+apps/web/app/arena/[id]/page.tsx 6ms (unchanged)
+apps/web/app/arena/page.tsx 2ms (unchanged)
+apps/web/app/developers/page.tsx 16ms (unchanged)
+apps/web/app/error.tsx 3ms (unchanged)
+apps/web/app/globals.css 109ms
+apps/web/app/lab/page.tsx 2ms (unchanged)
+apps/web/app/layout.tsx 3ms (unchanged)
+apps/web/app/me/page.tsx 1ms (unchanged)
+apps/web/app/not-found.tsx 1ms (unchanged)
+apps/web/app/page.tsx 8ms
+apps/web/app/proof/page.tsx 1ms (unchanged)
+apps/web/app/recorder/page.tsx 1ms (unchanged)
+apps/web/app/security/page.tsx 7ms (unchanged)
+apps/web/app/submission/page.tsx 5ms (unchanged)
+apps/web/components/action.tsx 22ms (unchanged)
+apps/web/components/explanation.tsx 7ms (unchanged)
+apps/web/components/future-tree.tsx 9ms (unchanged)
+apps/web/components/history.tsx 28ms
+apps/web/components/lab.tsx 25ms (unchanged)
+apps/web/components/live.tsx 3ms (unchanged)
+apps/web/components/manifest-reader.tsx 3ms (unchanged)
+apps/web/components/my-proof.tsx 4ms (unchanged)
+apps/web/components/rift-effect.tsx 3ms
+apps/web/components/shell.tsx 11ms (unchanged)
+apps/web/components/ui.tsx 6ms (unchanged)
+apps/web/components/verifier.tsx 9ms (unchanged)
+apps/web/components/war-room.tsx 28ms (unchanged)
+apps/web/lib/chain.ts 5ms (unchanged)
+apps/web/lib/config.ts 3ms (unchanged)
+apps/web/lib/state.ts 2ms (unchanged)
+apps/web/next-env.d.ts 3ms
+apps/web/next.config.ts 3ms (unchanged)
+apps/web/package.json 2ms (unchanged)
+apps/web/postcss.config.mjs 3ms (unchanged)
+apps/web/tsconfig.json 1ms (unchanged)
+docker-compose.yml 2ms (unchanged)
+docs/ADOPTION.md 26ms (unchanged)
+docs/API.md 16ms (unchanged)
+docs/ARCHITECTURE.md 5ms (unchanged)
+docs/AUDIT_CHECKLIST.md 6ms (unchanged)
+docs/DEMO_SCRIPT.md 7ms (unchanged)
+docs/evidence/live-readonly-preflight.json 4ms (unchanged)
+docs/evidence/rpc-capabilities.json 1ms
+docs/LIMITATIONS.md 5ms (unchanged)
+docs/OWNER_PERMISSIONS.md 3ms (unchanged)
+docs/PITCH.md 6ms (unchanged)
+docs/RESEARCH.md 8ms (unchanged)
+docs/SECURITY.md 7ms (unchanged)
+docs/SUBMISSION.md 13ms (unchanged)
+docs/TECHNICAL_DESIGN.md 5ms (unchanged)
+docs/TEST_COVERAGE.md 4ms (unchanged)
+docs/THREAT_MODEL.md 5ms (unchanged)
+docs/USER_GUIDE.md 5ms (unchanged)
+docs/VERIFY_DEPLOYMENT.md 8ms (unchanged)
+eslint.config.mjs 3ms (unchanged)
+package.json 0ms (unchanged)
+packages/agent-skill/SKILL.md 11ms (unchanged)
+packages/cli/package.json 1ms
+packages/cli/src/action.ts 9ms (unchanged)
+packages/cli/src/adapter.ts 19ms (unchanged)
+packages/cli/src/index.ts 15ms (unchanged)
+packages/cli/test/adapter.test.ts 18ms (unchanged)
+packages/cli/tsconfig.json 1ms
+packages/contracts/deployments/README.md 1ms (unchanged)
+packages/contracts/package.json 0ms (unchanged)
+packages/contracts/README.md 4ms (unchanged)
+packages/contracts/reports/anvil-smoke.json 1ms (unchanged)
+packages/contracts/reports/results.json 1ms (unchanged)
+packages/contracts/reports/SECURITY_REVIEW.md 4ms (unchanged)
+packages/contracts/reports/slither.json 34ms
+packages/contracts/script/export-artifacts.mjs 4ms (unchanged)
+packages/contracts/verification/compiler.json 1ms (unchanged)
+packages/contracts/verification/standard-input.json 1ms
+packages/core/package.json 1ms
+packages/core/README.md 8ms (unchanged)
+packages/core/src/abi.ts 2ms (unchanged)
+packages/core/src/client.ts 5ms
+packages/core/src/constants.ts 3ms
+packages/core/src/decode.ts 3ms
+packages/core/src/events.ts 22ms
+packages/core/src/hash.ts 5ms
+packages/core/src/index.ts 1ms (unchanged)
+packages/core/src/manifest.ts 14ms
+packages/core/src/preflight.ts 14ms
+packages/core/src/receipt.ts 10ms
+packages/core/src/schema.ts 3ms
+packages/core/test/abi.test.ts 3ms
+packages/core/test/chain.test.ts 18ms
+packages/core/test/core.test.ts 15ms
+packages/core/test/manifest.test.ts 8ms
+packages/core/tsconfig.json 1ms
+playwright.config.ts 2ms (unchanged)
+playwright.protocol.config.ts 1ms (unchanged)
+pnpm-workspace.yaml 1ms (unchanged)
+README.md 6ms (unchanged)
+scripts/contracts.mjs 14ms (unchanged)
+scripts/lighthouse.mjs 3ms (unchanged)
+scripts/mainnet.mjs 10ms (unchanged)
+scripts/protocol-e2e.mjs 4ms (unchanged)
+scripts/release.mjs 8ms (unchanged)
+scripts/secret-scan.mjs 2ms (unchanged)
+scripts/start-web.mjs 1ms (unchanged)
+tests/e2e/public.spec.ts 8ms
+tests/local-chain.mjs 2ms (unchanged)
+tests/protocol/workflow.spec.ts 12ms
+tsconfig.base.json 1ms (unchanged)

@@ -1,0 +1,23 @@
+{
+  "name": "@premortem/core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit"
+  },
+  "dependencies": {
+    "viem": "^2.38.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "fast-check": "^4.3.0",
+    "vitest": "^3.2.0",
+    "typescript": "^5.9.0"
+  }
+}

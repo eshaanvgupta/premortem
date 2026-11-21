@@ -1,0 +1,133 @@
+Compiling 1 files with Solc 0.8.39
+Solc 0.8.39 finished in 338.84ms
+Compiler run successful!
+
+Ran 69 tests for test/PremortemRegistry.t.sol:PremortemRegistryTest
+[PASS] testBlindCannotOpen() (gas: 237355)
+[PASS] testBlindHappyPath() (gas: 554513)
+[PASS] testCapsuleBinding() (gas: 513880)
+[PASS] testCategoryAndConfidenceBinding() (gas: 334796)
+[PASS] testChainBinding() (gas: 335204)
+[PASS] testCommitBoundary() (gas: 237162)
+[PASS] testConstructorMissingCode() (gas: 207041)
+[PASS] testContractBinding() (gas: 1671832)
+[PASS] testCreateAndRead() (gas: 230971)
+[PASS] testCreateEvent() (gas: 208299)
+[PASS] testDuplicateCommit() (gas: 332598)
+[PASS] testDuplicateEvidence() (gas: 305367)
+[PASS] testDuplicateOpen() (gas: 302286)
+[PASS] testDuplicateReveal() (gas: 397546)
+[PASS] testEarlyFinalization() (gas: 230398)
+[PASS] testEvidenceBinding() (gas: 334730)
+[PASS] testEvidenceDoesNotCountVotes() (gas: 273654)
+[PASS] testEvidenceFrozen() (gas: 270530)
+[PASS] testEvidencePhase() (gas: 237769)
+[PASS] testFinalizationPermissionless() (gas: 256795)
+[PASS] testFinalizeOnce() (gas: 263483)
+[PASS] testFuzzBadQuorum(uint8) (runs: 256, μ: 30404, ~: 39159)
+[PASS] testFuzzCommitmentBinding(uint256,address,uint8,uint8,bytes32,uint8,bytes32) (runs: 256, μ: 13603, ~: 13603)
+[PASS] testFuzzValidReview(uint8,uint8,uint8) (runs: 256, μ: 282389, ~: 282394)
+[PASS] testHashActionDomain() (gas: 13206)
+[PASS] testHashActionMatchesTypeScriptVector() (gas: 6748)
+[PASS] testIdentityCommit() (gas: 231625)
+[PASS] testIdentityCreate() (gas: 37537)
+[PASS] testIdentityEvidence() (gas: 232543)
+[PASS] testIdentityRevealRechecked() (gas: 351323)
+[PASS] testIdentityReview() (gas: 232119)
+[PASS] testInsufficientEvidenceNotApproval() (gas: 382539)
+[PASS] testInsufficientQuorum() (gas: 319391)
+[PASS] testInvalidConfidence() (gas: 276258)
+[PASS] testInvalidEnums() (gas: 310133)
+[PASS] testInvalidMode() (gas: 39046)
+[PASS] testInvalidQuorum() (gas: 72654)
+[PASS] testInvalidSchedule() (gas: 139769)
+[PASS] testLookupFailure() (gas: 1803563)
+[PASS] testLookupGasBounded() (gas: 1865764)
+[PASS] testLookupMalformed() (gas: 1783396)
+[PASS] testMainnetRejectsMockRegistry() (gas: 212395)
+[PASS] testNoPayableFunction() (gas: 36334)
+[PASS] testNoReceiveOrFallback() (gas: 57383)
+[PASS] testNoRevealInconclusive() (gas: 422196)
+[PASS] testOpenBoundary() (gas: 237671)
+[PASS] testOpenCannotCommit() (gas: 236416)
+[PASS] testOpenCannotReveal() (gas: 237308)
+[PASS] testOverlongLabelRejected() (gas: 38903)
+[PASS] testQuorumBoundaries() (gas: 373566)
+[PASS] testReadMissing() (gas: 14545)
+[PASS] testRejectMajority() (gas: 445397)
+[PASS] testRevealBeforeCommitDeadline() (gas: 328901)
+[PASS] testRevealBoundary() (gas: 329352)
+[PASS] testRevealWithoutCommit() (gas: 243705)
+[PASS] testReviewCommitmentMatchesTypeScriptVector() (gas: 28197)
+[PASS] testReviewEvent() (gas: 269114)
+[PASS] testReviewerBinding() (gas: 334735)
+[PASS] testSaltBinding() (gas: 334774)
+[PASS] testSelfCommit() (gas: 236969)
+[PASS] testSelfReview() (gas: 237415)
+[PASS] testTieInconclusive() (gas: 382571)
+[PASS] testTotalsMissing() (gas: 11085)
+[PASS] testUnicodeLabelRejected() (gas: 39113)
+[PASS] testVerdictBinding() (gas: 334752)
+[PASS] testWhitespaceLabelRejected() (gas: 38551)
+[PASS] testZeroCapsuleHash() (gas: 37912)
+[PASS] testZeroCommitHash() (gas: 239283)
+[PASS] testZeroReviewHash() (gas: 239873)
+Suite result: ok. 69 passed; 0 failed; 0 skipped; finished in 25.06ms (44.17ms CPU time)
+
+Ran 1 test for test/PremortemRegistry.t.sol:PremortemInvariantTest
+[PASS]
+PremortemInvariantTest invariants:
+[PASS] invariantFinalizationAtMostOnce
+[PASS] invariantFinalizationFreezesVotes
+[PASS] invariantNoCustody
+[PASS] invariantVotesBoundedByUniqueIdentities
+ PremortemInvariantTest invariants (runs: 128, calls: 4096, reverts: 0)
+
+╭---------------+----------+-------+---------+----------╮
+| Contract      | Selector | Calls | Reverts | Discards |
++=======================================================+
+| ReviewHandler | finish   | 2083  | 0       | 0        |
+|---------------+----------+-------+---------+----------|
+| ReviewHandler | review   | 2013  | 0       | 0        |
+╰---------------+----------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 300.54ms (285.05ms CPU time)
+
+╭------------------------------------------------------+-----------------+--------+--------+--------+---------╮
+| src/PremortemRegistry.sol:PremortemRegistry Contract |                 |        |        |        |         |
++=============================================================================================================+
+| Deployment Cost                                      | Deployment Size |        |        |        |         |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+|                                              1625752 |            7541 |        |        |        |         |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+|                                                      |                 |        |        |        |         |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| Function Name                                        | Min             | Avg    | Median | Max    | # Calls |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| addEvidence                                          |           28112 |  40975 |  32809 |  61047 |       7 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| capsuleCount                                         |            2308 |   2308 |   2308 |   2308 |       1 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| commitReview                                         |           27131 |  66380 |  81297 |  81297 |      22 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| createCapsule                                        |           26533 | 126855 | 194687 | 194953 |     519 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| finalizeCapsule                                      |           21249 |  27141 |  25976 |  33155 |     493 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| getCapsule                                           |            2938 |  16116 |  17764 |  17764 |       9 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| getReviewTotals                                      |            2610 |   7048 |   7062 |   7062 |     334 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| hasReviewed                                          |            2696 |   2696 |   2696 |   2696 |     257 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| hashAction                                           |            1203 |   1203 |   1203 |   1203 |       3 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| revealReview                                         |           27937 |  41347 |  38265 |  64681 |      16 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| reviewCommitment                                     |            1203 |   1203 |   1203 |   1203 |     532 |
+|------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| reviewOpen                                           |           27799 |  36938 |  32238 |  61646 |    2329 |
+╰------------------------------------------------------+-----------------+--------+--------+--------+---------╯
+
+
+Ran 2 test suites in 309.90ms (325.60ms CPU time): 70 tests passed, 0 failed, 0 skipped (70 total tests)

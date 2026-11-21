@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-11-20T03:30:34.253Z",
+  "readOnly": true,
+  "results": [
+    {
+      "endpoint": "https://bsc-dataseed-public.bnbchain.org",
+      "chainId": 56,
+      "blockNumber": "134623554",
+      "logs": {
+        "supported": false,
+        "error": "limit exceeded"
+      }
+    },
+    {
+      "endpoint": "https://bsc-rpc.publicnode.com",
+      "chainId": 56,
+      "blockNumber": "134623554",
+      "logs": {
+        "supported": true,
+        "results": 0
+      }
+    },
+    {
+      "endpoint": "https://bsc.drpc.org",
+      "error": "You reached Public endpoint rate limit, please upgrade to paid plan"
+    },
+    {
+      "endpoint": "https://rpc-bnb.blockmachine.io",
+      "chainId": 56,
+      "blockNumber": "134623642",
+      "logs": {
+        "supported": true,
+        "results": 0
+      }
+    }
+  ],
+  "limitations": [
+    "Single current-block capability probes; provider limits and availability can change. No historical completeness or authenticity guarantee."
+  ],
+  "selectedLogFallbacks": ["https://bsc-rpc.publicnode.com", "https://rpc-bnb.blockmachine.io"]
+}

@@ -1,0 +1,19 @@
+{
+  "environment": "ephemeral-test-only-state-injection",
+  "chainId": 31337,
+  "realAgentIdUsed": false,
+  "deploymentTransactions": 0,
+  "liveNetworkTransactions": 0,
+  "workflows": [
+    "identity fixture",
+    "capsule create",
+    "evidence add",
+    "two independent open reviews",
+    "time boundary",
+    "permissionless finalize",
+    "state and event verification"
+  ],
+  "transactions": 5,
+  "passed": 7,
+  "failed": 0
+}

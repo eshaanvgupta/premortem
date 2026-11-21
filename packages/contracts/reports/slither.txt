@@ -1,0 +1,34 @@
+'forge clean' running (wd: /mnt/c/Users/eshaa/OneDrive/Desktop/Hackathons/BNB Hackathon/packages/contracts)
+'forge config --json' running
+'forge build --build-info --skip ./test/** ./script/** --force' running (wd: /mnt/c/Users/eshaa/OneDrive/Desktop/Hackathons/BNB Hackathon/packages/contracts)
+
+Detector: timestamp
+PremortemRegistry.createCapsule(bytes32,bytes32,bytes32,string,uint64,uint64,uint8,uint8) (src/PremortemRegistry.sol#149-198) uses timestamp for comparisons
+	Dangerous comparisons:
+	- commitDeadline < block.timestamp + MIN_PHASE || commitDeadline > block.timestamp + MAX_PHASE (src/PremortemRegistry.sol#165)
+PremortemRegistry.addEvidence(uint256,bytes32,uint8,string) (src/PremortemRegistry.sol#201-215) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp >= c.revealDeadline (src/PremortemRegistry.sol#208)
+PremortemRegistry.reviewOpen(uint256,uint8,uint8,bytes32,uint8) (src/PremortemRegistry.sol#217-231) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp >= c.commitDeadline (src/PremortemRegistry.sol#226)
+PremortemRegistry.commitReview(uint256,bytes32) (src/PremortemRegistry.sol#233-243) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp >= c.commitDeadline (src/PremortemRegistry.sol#236)
+PremortemRegistry.revealReview(uint256,uint8,uint8,bytes32,bytes32,uint8) (src/PremortemRegistry.sol#245-267) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp < c.commitDeadline || block.timestamp >= c.revealDeadline (src/PremortemRegistry.sol#255)
+PremortemRegistry.finalizeCapsule(uint256) (src/PremortemRegistry.sol#272-282) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp < c.revealDeadline (src/PremortemRegistry.sol#274)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: assembly
+PremortemRegistry._requireHolder() (src/PremortemRegistry.sol#131-146) uses assembly
+	- INLINE ASM (src/PremortemRegistry.sol#139-143)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+
+Detector: naming-convention
+Variable PremortemRegistry.AGENT_ID (src/PremortemRegistry.sol#14) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+. analyzed (2 contracts with 101 detectors), 8 result(s) found

@@ -1,0 +1,97 @@
+{
+  "image": "premortem-validation:20261120",
+  "environment": "local-container-network-none",
+  "publishedPorts": [],
+  "userId": 1000,
+  "passedRoutes": 10,
+  "failedRoutes": 0,
+  "observations": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "bytes": 70,
+      "csp": true,
+      "nosniff": true,
+      "health": {
+        "status": "ok",
+        "protocol": "premortem/1",
+        "chainId": 56,
+        "deployed": false
+      }
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 27251,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/lab",
+      "status": 200,
+      "bytes": 13456,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/arena",
+      "status": 200,
+      "bytes": 10763,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/recorder",
+      "status": 200,
+      "bytes": 11910,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/proof",
+      "status": 200,
+      "bytes": 10806,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/me",
+      "status": 200,
+      "bytes": 11973,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/security",
+      "status": 200,
+      "bytes": 22574,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/developers",
+      "status": 200,
+      "bytes": 61512,
+      "csp": true,
+      "nosniff": true
+    },
+    {
+      "path": "/submission",
+      "status": 200,
+      "bytes": 19949,
+      "csp": true,
+      "nosniff": true
+    }
+  ],
+  "imageId": "sha256:0e0501770987c4bff943e017365366fec7faafff848fd692e970a0c5958af1d6",
+  "sourceHashChecks": {
+    "passed": 5,
+    "files": {
+      "apps/web/components/shell.tsx": "01660482f1375b5dcc1a26c6a512028e419baf8e8fbf548b101956e448fde82e",
+      "apps/web/components/war-room.tsx": "ee4c65d1595d4b94841a8fe2638197be27d94d4d0ffef06122c268d9604e8f85",
+      "apps/web/lib/config.ts": "bfb4bb1169eefa9c076659a293628b2136f07578f8625f6d2189348bfb995a06",
+      "packages/core/src/schema.ts": "4671e75ad507e3e0a88a659a0676fe5e044b9c4db8eda0159fc3929d4b52aa5e",
+      "packages/core/src/constants.ts": "ddefec7aa93cbc3b38e9e0dc4019576de9b766b008513b27cecccd1fee5f79f8"
+    }
+  }
+}

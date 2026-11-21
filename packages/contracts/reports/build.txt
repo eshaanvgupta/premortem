@@ -1,0 +1,89 @@
+Compiling 1 files with Solc 0.8.39
+Solc 0.8.39 finished in 143.34ms
+Compiler run successful!
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:165:13
+    │
+165 │         if (commitDeadline < block.timestamp + MIN_PHASE || commitDeadline > block.timestamp + MAX_PHASE) {
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:165:61
+    │
+165 │         if (commitDeadline < block.timestamp + MIN_PHASE || commitDeadline > block.timestamp + MAX_PHASE) {
+    │                                                             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[unsafe-typecast]: typecast can truncate values
+    ╭▸ src/PremortemRegistry.sol:177:23
+    │
+177 │         c.createdAt = uint64(block.timestamp);
+    │                       ━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ├ note: consider disabling this lint if you're certain the cast is safe
+    │       
+    │       // casting to 'uint64' is safe because [explain why]
+    │       // forge-lint: disable-next-line(unsafe-typecast)
+    │       
+    │       
+    ╰ help: https://getfoundry.sh/forge/linting/unsafe-typecast
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:208:13
+    │
+208 │         if (block.timestamp >= c.revealDeadline) revert WrongPhase();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:226:13
+    │
+226 │         if (block.timestamp >= c.commitDeadline) revert WrongPhase();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:236:13
+    │
+236 │         if (block.timestamp >= c.commitDeadline) revert WrongPhase();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:255:13
+    │
+255 │         if (block.timestamp < c.commitDeadline || block.timestamp >= c.revealDeadline) revert WrongPhase();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:255:51
+    │
+255 │         if (block.timestamp < c.commitDeadline || block.timestamp >= c.revealDeadline) revert WrongPhase();
+    │                                                   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[block-timestamp]: usage of `block.timestamp` in a comparison may be manipulated by validators
+    ╭▸ src/PremortemRegistry.sol:274:13
+    │
+274 │         if (block.timestamp < c.revealDeadline) revert WrongPhase();
+    │             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/block-timestamp
+
+warning[require-revert-in-loop]: `require` or `revert` inside a loop
+    ╭▸ src/PremortemRegistry.sol:388:52
+    │
+388 │             if (character < 32 || character > 126) revert InvalidText();
+    │                                                    ━━━━━━━━━━━━━━━━━━━━━
+    │
+    ╰ help: https://getfoundry.sh/forge/linting/require-revert-in-loop
+

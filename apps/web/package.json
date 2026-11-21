@@ -1,0 +1,33 @@
+{
+  "name": "@premortem/web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "@premortem/core": "workspace:*",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "viem": "^2.40.0",
+    "zod": "^4.1.0",
+    "motion": "^12.23.0",
+    "@tanstack/react-query": "^5.90.0",
+    "zustand": "^5.0.0",
+    "lucide-react": "^0.554.0",
+    "idb-keyval": "^6.2.2",
+    "@fontsource/unbounded": "^5.2.0",
+    "@fontsource/space-grotesk": "^5.2.0",
+    "@fontsource/ibm-plex-mono": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/postcss": "^4.1.0"
+  }
+}

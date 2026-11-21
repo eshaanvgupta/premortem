@@ -1,0 +1,218 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load remote build context
+#1 DONE 1.0s
+
+#1 [internal] load remote build context
+#1 DONE 1.0s
+
+#2 copy /context /
+#2 DONE 1.2s
+
+#3 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#3 DONE 2.4s
+
+#4 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#4 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e 0.0s done
+#4 CACHED
+
+#5 [internal] load metadata for docker.io/library/node:24.16.0-bookworm-slim@sha256:2c87ef9bd3c6a3bd4b472b4bec2ce9d16354b0c574f736c476489d09f560a203
+#5 DONE 0.0s
+
+#6 [build  1/11] FROM docker.io/library/node:24.16.0-bookworm-slim@sha256:2c87ef9bd3c6a3bd4b472b4bec2ce9d16354b0c574f736c476489d09f560a203
+#6 resolve docker.io/library/node:24.16.0-bookworm-slim@sha256:2c87ef9bd3c6a3bd4b472b4bec2ce9d16354b0c574f736c476489d09f560a203
+#6 resolve docker.io/library/node:24.16.0-bookworm-slim@sha256:2c87ef9bd3c6a3bd4b472b4bec2ce9d16354b0c574f736c476489d09f560a203 0.2s done
+#6 DONE 0.2s
+
+#7 [build  3/11] RUN npm install --global pnpm@11.25.0
+#7 CACHED
+
+#8 [build  2/11] WORKDIR /app
+#8 CACHED
+
+#9 [build  4/11] COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig.base.json ./
+#9 DONE 0.1s
+
+#10 [build  5/11] COPY apps/web/package.json apps/web/package.json
+#10 DONE 0.1s
+
+#11 [build  6/11] COPY packages/core/package.json packages/core/package.json
+#11 DONE 0.1s
+
+#12 [build  7/11] COPY packages/cli/package.json packages/cli/package.json
+#12 DONE 0.0s
+
+#13 [build  8/11] COPY packages/contracts/package.json packages/contracts/package.json
+#13 DONE 0.1s
+
+#14 [build  9/11] RUN pnpm install --frozen-lockfile
+#14 0.850 Scope: all 5 workspace projects
+#14 0.951 ? Verifying lockfile against supply-chain policies (489 entries)...
+#14 0.961 Lockfile is up to date, resolution step is skipped
+#14 1.041 Progress: resolved 1, reused 0, downloaded 0, added 0
+#14 1.119 Packages: +343
+#14 1.119 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#14 1.573 Packages are hard linked from the content-addressable store to the virtual store.
+#14 1.573   Content-addressable store is at: /root/.local/share/pnpm/store/v11
+#14 1.573   Virtual store is at:             node_modules/.pnpm
+#14 2.045 Progress: resolved 343, reused 0, downloaded 8, added 8
+#14 2.595 
+#14 2.595    ╭──────────────────────────────────────────────────────────────────────╮
+#14 2.595    │                                                                      │
+#14 2.595    │                 Update available! 11.25.0 → 12.21.0.                 │
+#14 2.595    │                 Changelog: https://pnpm.io/v/12.21.0                 │
+#14 2.595    │   To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -   │
+#14 2.595    │                                                                      │
+#14 2.595    ╰──────────────────────────────────────────────────────────────────────╯
+#14 2.595 
+#14 3.045 Progress: resolved 343, reused 0, downloaded 45, added 45
+#14 4.046 Progress: resolved 343, reused 0, downloaded 57, added 57
+#14 5.047 Progress: resolved 343, reused 0, downloaded 70, added 69
+#14 6.047 Progress: resolved 343, reused 0, downloaded 91, added 91
+#14 7.049 Progress: resolved 343, reused 0, downloaded 92, added 92
+#14 8.049 Progress: resolved 343, reused 0, downloaded 94, added 94
+#14 9.050 Progress: resolved 343, reused 0, downloaded 104, added 104
+#14 10.05 Progress: resolved 343, reused 0, downloaded 110, added 110
+#14 11.05 Progress: resolved 343, reused 0, downloaded 118, added 118
+#14 12.05 Progress: resolved 343, reused 0, downloaded 134, added 134
+#14 13.05 Progress: resolved 343, reused 0, downloaded 147, added 147
+#14 14.06 Progress: resolved 343, reused 0, downloaded 156, added 156
+#14 14.54 [WARN] Request took 11564ms: https://registry.npmjs.org/@next%2Fenv
+#14 15.06 Progress: resolved 343, reused 0, downloaded 163, added 163
+#14 16.06 Progress: resolved 343, reused 0, downloaded 174, added 174
+#14 15.76 [WARN] Request took 12673ms: https://registry.npmjs.org/@next%2Fswc-darwin-x64
+#14 15.78 [WARN] Request took 12673ms: https://registry.npmjs.org/@next%2Fswc-linux-x64-gnu
+#14 15.99 Progress: resolved 343, reused 0, downloaded 182, added 182
+#14 16.12 [WARN] Request took 13139ms: https://registry.npmjs.org/@next%2Fswc-darwin-arm64
+#14 16.99 Progress: resolved 343, reused 0, downloaded 189, added 189
+#14 17.52 [WARN] Request took 14429ms: https://registry.npmjs.org/@next%2Fswc-linux-arm64-gnu
+#14 17.72 [WARN] Request took 14606ms: https://registry.npmjs.org/@next%2Fswc-win32-x64-msvc
+#14 17.99 Progress: resolved 343, reused 0, downloaded 197, added 197
+#14 18.99 Progress: resolved 343, reused 0, downloaded 205, added 205
+#14 19.99 Progress: resolved 343, reused 0, downloaded 212, added 211
+#14 20.34 [WARN] Request took 10680ms: https://registry.npmjs.org/@types%2Fnode
+#14 20.96 [WARN] Tarball download average speed 46 KiB/s (size 120 KiB) is below 50 KiB/s: https://registry.npmjs.org/minimatch/-/minimatch-11.0.9.tgz (GET)
+#14 20.99 Progress: resolved 343, reused 0, downloaded 218, added 218
+#14 22.00 Progress: resolved 343, reused 0, downloaded 221, added 221
+#14 23.00 Progress: resolved 343, reused 0, downloaded 222, added 222
+#14 24.00 Progress: resolved 343, reused 0, downloaded 230, added 230
+#14 24.03 [WARN] Request took 13970ms: https://registry.npmjs.org/@typescript-eslint%2Fscope-manager
+#14 25.00 Progress: resolved 343, reused 0, downloaded 231, added 231
+#14 25.09 [WARN] Tarball download average speed 18 KiB/s (size 118 KiB) is below 50 KiB/s: https://registry.npmjs.org/@noble/ciphers/-/ciphers-1.3.0.tgz (GET)
+#14 25.54 [WARN] Request took 15307ms: https://registry.npmjs.org/@typescript-eslint%2Ftype-utils
+#14 26.00 Progress: resolved 343, reused 0, downloaded 238, added 238
+#14 27.00 Progress: resolved 343, reused 0, downloaded 246, added 246
+#14 27.38 [WARN] Request took 16804ms: https://registry.npmjs.org/@typescript-eslint%2Ftypescript-estree
+#14 27.72 [WARN] Tarball download average speed 47 KiB/s (size 555 KiB) is below 50 KiB/s: https://registry.npmjs.org/@sentry/server-runtime-injection/-/server-runtime-injection-11.14.0.tgz (GET)
+#14 28.00 Progress: resolved 343, reused 0, downloaded 262, added 262
+#14 28.39 [WARN] Tarball download average speed 47 KiB/s (size 1115 KiB) is below 50 KiB/s: https://registry.npmjs.org/zod/-/zod-4.6.7.tgz (GET)
+#14 28.61 [WARN] Request took 10415ms: https://registry.npmjs.org/@sentry%2Fcore
+#14 29.00 Progress: resolved 343, reused 0, downloaded 280, added 280
+#14 29.28 [WARN] Request took 13962ms: https://registry.npmjs.org/caniuse-lite
+#14 30.00 Progress: resolved 343, reused 0, downloaded 297, added 297
+#14 30.22 [WARN] Request took 26622ms: https://registry.npmjs.org/@playwright%2Ftest
+#14 30.54 [WARN] Request took 19940ms: https://registry.npmjs.org/@typescript-eslint%2Futils
+#14 31.00 Progress: resolved 343, reused 0, downloaded 310, added 310
+#14 32.00 Progress: resolved 343, reused 0, downloaded 316, added 316
+#14 33.00 Progress: resolved 343, reused 0, downloaded 318, added 318
+#14 33.21 [WARN] Request took 23411ms: https://registry.npmjs.org/@typescript-eslint%2Feslint-plugin
+#14 35.53 [WARN] Request took 16499ms: https://registry.npmjs.org/esbuild
+#14 36.30 [WARN] Tarball download average speed 44 KiB/s (size 1377 KiB) is below 50 KiB/s: https://registry.npmjs.org/react-dom/-/react-dom-19.3.1.tgz (GET)
+#14 36.36 Progress: resolved 343, reused 0, downloaded 319, added 318
+#14 37.36 Progress: resolved 343, reused 0, downloaded 319, added 319
+#14 38.56 Progress: resolved 343, reused 0, downloaded 320, added 319
+#14 39.56 Progress: resolved 343, reused 0, downloaded 320, added 320
+#14 42.29 [WARN] Tarball download average speed 28 KiB/s (size 317 KiB) is below 50 KiB/s: https://registry.npmjs.org/@fontsource/space-grotesk/-/space-grotesk-5.3.0.tgz (GET)
+#14 42.30 Progress: resolved 343, reused 0, downloaded 321, added 320
+#14 42.98 [WARN] Request took 13321ms: https://registry.npmjs.org/next
+#14 43.06 [WARN] Request took 32496ms: https://registry.npmjs.org/@typescript-eslint%2Ftypes
+#14 43.30 Progress: resolved 343, reused 0, downloaded 321, added 321
+#14 43.55 [WARN] Request took 15089ms: https://registry.npmjs.org/lighthouse
+#14 44.00 [WARN] Request took 13508ms: https://registry.npmjs.org/playwright
+#14 45.53 [WARN] Tarball download average speed 33 KiB/s (size 816 KiB) is below 50 KiB/s: https://registry.npmjs.org/motion-dom/-/motion-dom-12.43.0.tgz (GET)
+#14 45.60 Progress: resolved 343, reused 0, downloaded 322, added 321
+#14 45.90 [WARN] Request took 14135ms: https://registry.npmjs.org/scheduler
+#14 46.09 [WARN] Request took 12500ms: https://registry.npmjs.org/tldts-core
+#14 46.36 [WARN] Request took 31540ms: https://registry.npmjs.org/axe-core
+#14 46.60 Progress: resolved 343, reused 0, downloaded 322, added 322
+#14 47.07 [WARN] Tarball download average speed 42 KiB/s (size 1346 KiB) is below 50 KiB/s: https://registry.npmjs.org/@sentry/conventions/-/conventions-0.33.0.tgz (GET)
+#14 47.56 [WARN] Request took 29320ms: https://registry.npmjs.org/devtools-protocol
+#14 47.60 Progress: resolved 343, reused 0, downloaded 323, added 323
+#14 47.80 [WARN] Tarball download average speed 38 KiB/s (size 1680 KiB) is below 50 KiB/s: https://registry.npmjs.org/ox/-/ox-0.14.67.tgz (GET)
+#14 48.60 [WARN] Tarball download average speed 47 KiB/s (size 879 KiB) is below 50 KiB/s: https://registry.npmjs.org/@oxc-parser/binding-linux-x64-gnu/-/binding-linux-x64-gnu-0.152.0.tgz (GET)
+#14 48.60 Progress: resolved 343, reused 0, downloaded 324, added 324
+#14 48.75 [WARN] Request took 14468ms: https://registry.npmjs.org/typescript-eslint
+#14 49.00 [WARN] Request took 24022ms: https://registry.npmjs.org/framer-motion
+#14 49.17 [WARN] Request took 13109ms: https://registry.npmjs.org/zod
+#14 49.60 Progress: resolved 343, reused 0, downloaded 326, added 326
+#14 49.72 [WARN] Request took 18318ms: https://registry.npmjs.org/react
+#14 50.99 [WARN] Request took 20711ms: https://registry.npmjs.org/playwright-core
+#14 51.06 Progress: resolved 343, reused 0, downloaded 327, added 326
+#14 51.12 [WARN] Tarball download average speed 37 KiB/s (size 1343 KiB) is below 50 KiB/s: https://registry.npmjs.org/@sentry/core/-/core-11.14.0.tgz (GET)
+#14 52.06 Progress: resolved 343, reused 0, downloaded 328, added 328
+#14 53.31 Progress: resolved 343, reused 0, downloaded 329, added 328
+#14 54.31 Progress: resolved 343, reused 0, downloaded 332, added 332
+#14 56.30 Progress: resolved 343, reused 0, downloaded 333, added 332
+#14 57.00 [WARN] Request took 25609ms: https://registry.npmjs.org/react-dom
+#14 57.07 [WARN] Request took 24274ms: https://registry.npmjs.org/tailwindcss
+#14 57.30 Progress: resolved 343, reused 0, downloaded 333, added 333
+#14 57.57 [WARN] Request took 46838ms: https://registry.npmjs.org/@typescript-eslint%2Fvisitor-keys
+#14 60.05 Progress: resolved 343, reused 0, downloaded 334, added 333
+#14 60.07 [WARN] GET https://registry.npmjs.org/next/-/next-16.4.6.tgz error (23). Will retry in 10 seconds. 2 retries left.
+#14 60.09 [WARN] GET https://registry.npmjs.org/@paulirish/trace_engine/-/trace_engine-0.0.67.tgz error (23). Will retry in 10 seconds. 2 retries left.
+#14 61.05 Progress: resolved 343, reused 0, downloaded 335, added 335
+#14 61.21 [WARN] Request took 26466ms: https://registry.npmjs.org/typescript
+#14 63.47 [WARN] GET https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-16.4.6.tgz error (23). Will retry in 10 seconds. 2 retries left.
+#14 63.85 [WARN] GET https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.12.tgz error (23). Will retry in 10 seconds. 2 retries left.
+#14 70.04 Progress: resolved 343, reused 0, downloaded 336, added 335
+#14 71.04 Progress: resolved 343, reused 0, downloaded 337, added 337
+#14 76.33 [WARN] GET https://registry.npmjs.org/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.3.4.tgz error (23). Will retry in 10 seconds. 2 retries left.
+#14 77.67 Progress: resolved 343, reused 0, downloaded 338, added 337
+#14 78.67 Progress: resolved 343, reused 0, downloaded 338, added 338
+#14 79.50 [WARN] Request took 18202ms: https://registry.npmjs.org/typescript
+#14 79.53 ✓ Lockfile passes supply-chain policies (489 entries in 1m 18.5s)
+#14 88.47 Progress: resolved 343, reused 0, downloaded 339, added 338
+#14 89.47 Progress: resolved 343, reused 0, downloaded 339, added 339
+#14 95.42 Progress: resolved 343, reused 0, downloaded 340, added 339
+#14 96.42 Progress: resolved 343, reused 0, downloaded 341, added 341
+#14 101.2 Progress: resolved 343, reused 0, downloaded 342, added 341
+#14 102.2 Progress: resolved 343, reused 0, downloaded 342, added 342
+#14 117.0 Progress: resolved 343, reused 0, downloaded 343, added 342
+#14 117.0 Progress: resolved 343, reused 0, downloaded 343, added 343, done
+#14 117.1 .../esbuild@0.28.2/node_modules/esbuild postinstall$ node install.js
+#14 117.1 .../esbuild@0.25.12/node_modules/esbuild postinstall$ node install.js
+#14 117.2 .../esbuild@0.28.2/node_modules/esbuild postinstall: Done
+#14 117.2 .../esbuild@0.25.12/node_modules/esbuild postinstall: Done
+#14 117.4 
+#14 117.4 devDependencies:
+#14 117.4 + @axe-core/playwright 4.14.0
+#14 117.4 + @eslint/js 9.39.5
+#14 117.4 + @playwright/test 1.65.1
+#14 117.4 + @types/node 24.19.2
+#14 117.4 + eslint 9.39.5
+#14 117.4 + fast-check 4.10.3
+#14 117.4 + lighthouse 13.6.0
+#14 117.4 + prettier 3.10.1
+#14 117.4 + tsx 4.23.15
+#14 117.4 + typescript 5.9.3
+#14 117.4 + typescript-eslint 8.73.0
+#14 117.4 + viem 2.58.2
+#14 117.4 + vitest 4.1.12
+#14 117.4 
+#14 117.6 Done in 1m 57.3s using pnpm v11.25.0
+#14 DONE 118.2s
+
+#15 [build 10/11] COPY . .
+#15 ERROR: cannot copy to non-directory: /var/lib/docker/buildkit/containerd-overlayfs/cachemounts/buildkit1997026349/app/node_modules/@axe-core/playwright
+------
+ > [build 10/11] COPY . .:
+------
+Dockerfile:12
+--------------------
+  10 |     COPY packages/contracts/package.json packages/contracts/package.json
+  11 |     RUN pnpm install --frozen-lockfile
+  12 | >>> COPY . .
+  13 |     # These are public browser configuration only. Never pass signer/API secrets.
+  14 |     ARG NEXT_PUBLIC_BSC_RPC_URL=https://bsc-dataseed-public.bnbchain.org
+--------------------
+ERROR: failed to build: failed to solve: cannot copy to non-directory: /var/lib/docker/buildkit/containerd-overlayfs/cachemounts/buildkit1997026349/app/node_modules/@axe-core/playwright

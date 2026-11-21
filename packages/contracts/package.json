@@ -1,0 +1,12 @@
+{
+  "name": "@premortem/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test -vvv",
+    "gas": "forge test --gas-report",
+    "snapshot": "forge snapshot",
+    "abi": "node script/export-artifacts.mjs"
+  }
+}

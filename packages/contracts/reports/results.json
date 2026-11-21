@@ -1,0 +1,41 @@
+{
+  "status": "local-validation-complete-no-deployment",
+  "compiler": "0.8.39+commit.ce47f2c8",
+  "foundry": "1.10.0",
+  "evmVersion": "paris",
+  "optimizerRuns": 200,
+  "foundryTests": {
+    "passed": 70,
+    "failed": 0,
+    "skipped": 0,
+    "unitAndFuzzTests": 69,
+    "groupedInvariantSuites": 1,
+    "invariantFunctions": 4,
+    "invariantRuns": 128,
+    "invariantCalls": 4096,
+    "fuzzRunsPerFunction": 256,
+    "fuzzFunctions": 3
+  },
+  "slither": {
+    "detectors": 101,
+    "findings": 8,
+    "high": 0,
+    "medium": 0,
+    "low": 6,
+    "informational": 2
+  },
+  "bytecode": { "runtimeBytes": 7253, "initcodeBytes": 7541 },
+  "mockIdentityGasMaxima": {
+    "createCapsule": 194953,
+    "reviewOpen": 61646,
+    "commitReview": 81297,
+    "revealReview": 64681,
+    "addEvidence": 61047,
+    "finalizeCapsule": 33155,
+    "deployment": 1625752
+  },
+  "mainnetDeployment": null,
+  "bscScanVerification": null,
+  "officialWalletSigning": "not-attempted",
+  "formalAudit": false
+}

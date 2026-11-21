@@ -1,0 +1,33 @@
+{
+  "protocolVersion": "PREMORTEM/1",
+  "state": "PREPARED_NOT_DEPLOYED",
+  "chainId": 56,
+  "address": null,
+  "transactionHash": null,
+  "explorerVerification": "NOT_DONE",
+  "officialAgentId": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+  "officialAgentIdCodeHash": "0xc4006e6e6ffaaf6996116617392beabe4f5f0a0795841322f91c2ceac34d6ace",
+  "balanceOfInterfaceChecked": true,
+  "balanceProbe": "0x1111111111111111111111111111111111111111",
+  "probeEstablishesUserIdentity": false,
+  "gasPriceWei": "50000000",
+  "headBlock": "134621835",
+  "compiler": "0.8.39+commit.ce47f2c8",
+  "optimizerRuns": 200,
+  "evmVersion": "paris",
+  "expectedRuntimeCodeHash": "0x75f282f00279ca552e0ff2a4ec944f96b24815466582339548a62e98f2e05e14",
+  "adminPowers": [],
+  "payableMethods": [],
+  "gasEstimate": null,
+  "gasEstimateStatus": "DEPLOYER_ADDRESS required for sender-specific estimate",
+  "estimatedFeeWei": null,
+  "approvedForBroadcast": false,
+  "remaining": [
+    "Operator authorization for deployment",
+    "Funded local keystore or hardware signer",
+    "Successful deployment receipt",
+    "BscScan source verification",
+    "Actual Agent ID holder consent and wallet write smoke",
+    "Public source/site publication approval"
+  ]
+}
