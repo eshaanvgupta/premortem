@@ -184,9 +184,9 @@ async function execute(file: string, expectedMethod?: string) {
 }
 
 const program = new Command()
-  .name('premortem')
+  .name('nexora')
   .description(
-    'PREMORTEM local Agentic Wallet adapter. No custody, no credential storage, no action execution.',
+    'NEXORA local Agentic Wallet adapter. No custody, no credential storage, no action execution.',
   )
   .version('1.0.0');
 program

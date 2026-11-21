@@ -1,10 +1,14 @@
-# PREMORTEM
+# NEXORA
 
 **LET THE FUTURE FAIL BEFORE IT HAPPENS.** Proof before action.
 
-Agent ID-native, deterministic preflight and adversarial review for consequential on-chain proposals. PREMORTEM records advisory decisions; it never executes the proposed transaction, takes custody, or grants token approvals.
+Agent ID-native, deterministic preflight and adversarial review for consequential on-chain proposals. NEXORA records advisory decisions; it never executes the proposed transaction, takes custody, or grants token approvals.
 
 Public source: [eshaanvgupta/premortem](https://github.com/eshaanvgupta/premortem). See [executed validation](docs/VALIDATION.md) and [deployment readiness](docs/DEPLOYMENT_READINESS.md) before launching.
+
+Live app: [NEXORA](https://premortem-protocol.guppy-ai.chatgpt.site). BSC mainnet registry: [`0x042632f7476D6293145D13d17CD8834922Eb2F39`](https://bscscan.com/address/0x042632f7476D6293145D13d17CD8834922Eb2F39#code). [Sourcify source verification](https://repo.sourcify.dev/56/0x042632f7476D6293145D13d17CD8834922Eb2F39) passed; final BscScan source status awaits confirmation.
+
+NEXORA is the product name. The deployed `PremortemRegistry` contract, `PREMORTEM/1` hash domain, existing SDK scope, environment variable names, and JSON schema versions retain their protocol identifiers for compatibility. No contract redeployment is needed for the rename. `pnpm nexora` is the current CLI command; `pnpm premortem` remains an alias.
 
 ## Run locally
 
@@ -36,6 +40,8 @@ pnpm lighthouse
 pnpm secret:scan
 pnpm audit --prod
 pnpm prepare:mainnet
+pnpm build:static
+pnpm test:deployment
 pnpm release
 ```
 
@@ -50,29 +56,31 @@ forge test --gas-report
 forge fmt --check
 ```
 
+`pnpm build:production` loads the recorded mainnet deployment and public Site manifest to produce the configured static export. The repository includes no wallet keys. See [mainnet launch](docs/MAINNET_LAUNCH.md).
+
 ## Application
 
-| Route         | Working purpose                                                                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------- |
-| `/`           | The Rift, product narrative and chain-derived status                                                 |
-| `/lab`        | Exact-input RPC observation, deterministic findings, Future Tree, manifest and capsule preparation   |
-| `/arena`      | Paginated, searchable real on-chain capsules and phase filters                                       |
-| `/arena/:id`  | Open/blind review, counterevidence, manifest integrity check, finalization, validated receipt export |
-| `/recorder`   | Chain timeline and independent transaction/receipt verification                                      |
-| `/me`         | Official `balanceOf` identity check and public contribution history                                  |
-| `/proof`      | Confirmed, deduplicated holder participation with explicit scan coverage                             |
-| `/security`   | Trust boundaries and official local wallet setup                                                     |
-| `/developers` | SDK, ABI and CLI integration                                                                         |
-| `/submission` | Honest judges dossier and launch requirements                                                        |
+| Route             | Working purpose                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------- |
+| `/`               | The Rift, product narrative and chain-derived status                                                 |
+| `/lab`            | Exact-input RPC observation, deterministic findings, Future Tree, manifest and capsule preparation   |
+| `/arena`          | Paginated, searchable real on-chain capsules and phase filters                                       |
+| `/capsule?id=:id` | Open/blind review, counterevidence, manifest integrity check, finalization, validated receipt export |
+| `/recorder`       | Chain timeline and independent transaction/receipt verification                                      |
+| `/me`             | Official `balanceOf` identity check and public contribution history                                  |
+| `/proof`          | Confirmed, deduplicated holder participation with explicit scan coverage                             |
+| `/security`       | Trust boundaries and official local wallet setup                                                     |
+| `/developers`     | SDK, ABI and CLI integration                                                                         |
+| `/submission`     | Honest judges dossier and launch requirements                                                        |
 
 The frontend supports an actual installed EIP-1193 browser provider. It does **not** represent that as an Agentic Wallet connector. Agentic Wallet users download a scoped JSON action and execute it only in their trusted local environment through the official `baw` CLI adapter. There is no website QR sign-in, pairing-code field, server custody or wallet session storage.
 
 ```sh
-pnpm premortem doctor --from YOUR_PUBLIC_AGENTIC_WALLET_ADDRESS
-pnpm premortem inspect --from YOUR_PUBLIC_ADDRESS --to TARGET --data 0x --value 0
-pnpm premortem capsule prepare --file premortem-action.json
+pnpm nexora doctor --from YOUR_PUBLIC_AGENTIC_WALLET_ADDRESS
+pnpm nexora inspect --from YOUR_PUBLIC_ADDRESS --to TARGET --data 0x --value 0
+pnpm nexora capsule prepare --file premortem-action.json
 # Signing command: only run when you intentionally authorize this exact mainnet call.
-pnpm premortem execute --file premortem-action.json
+pnpm nexora execute --file premortem-action.json
 ```
 
 The adapter enforces unexpired Developer Mode, official preview, preview consistency checks and an interactive human confirmation. Unsupported official response schemas fail closed. Real Agentic Wallet signing remains unverified until an actual consenting holder exercises its custom-call preview and execution.
@@ -85,7 +93,7 @@ flowchart LR
   Lab --> Core[Deterministic TypeScript core]
   Core --> RPC[BSC RPC / public log fallbacks]
   Lab --> File[Scoped action JSON]
-  File --> CLI[Trusted local PREMORTEM CLI]
+  File --> CLI[Trusted local NEXORA CLI]
   CLI --> BAW[Official baw preview]
   BAW --> Confirm[Explicit human and wallet authorization]
   Confirm --> Registry[Immutable PremortemRegistry]
@@ -104,7 +112,7 @@ flowchart LR
 
 ## Deployment boundary
 
-**No PREMORTEM contract has been deployed and no public site has been published by this build.** Mainnet chain ID is 56. The official identity registry is `0x60b9262456de011f7d15a54cdd8c48baaa8b022f`. The PREMORTEM mainnet address remains unknown until an explicitly authorized deployment.
+**No NEXORA contract has been deployed and no public site has been published by this build.** Mainnet chain ID is 56. The official identity registry is `0x60b9262456de011f7d15a54cdd8c48baaa8b022f`. The NEXORA mainnet address remains unknown until an explicitly authorized deployment.
 
 See [deployment instructions](docs/VERIFY_DEPLOYMENT.md), [readiness evidence](docs/DEPLOYMENT_READINESS.md), [validation report](docs/VALIDATION.md), [security model](docs/SECURITY.md), [owner permissions](docs/OWNER_PERMISSIONS.md), [limitations](docs/LIMITATIONS.md), and [submission dossier](docs/SUBMISSION.md).
 

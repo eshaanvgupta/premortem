@@ -1,0 +1,13 @@
+{
+  "product": "NEXORA",
+  "projectId": "appgprj_6b0131be22f081919e37112134568661",
+  "url": "https://premortem-protocol.guppy-ai.chatgpt.site",
+  "audience": "public",
+  "deploymentId": "appgdep_6b01383a6868819193692c8d872a4b55",
+  "versionId": "appgprj_6b0131be22f081919e37112134568661~appgver_c7d5fc3290f48191945c046e7195753f",
+  "versionNumber": 2,
+  "status": "succeeded",
+  "sourceCommit": "f19bff56c4a9f409db5e10d69c13677dfbf85716",
+  "archiveHash": "sha256:0a607863bf67e420ef834e1e042353f36f3e8418a9fd442eaeb8279285bdaf66",
+  "checkedAt": "2026-11-21T06:20:59.289023+00:00"
+}

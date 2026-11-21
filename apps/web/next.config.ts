@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 const config: NextConfig = {
+  ...(process.env.PREMORTEM_STATIC_EXPORT === '1' ? { output: 'export' as const } : {}),
   distDir: process.env.PREMORTEM_BUILD_DIR || '.next',
   transpilePackages: ['@premortem/core'],
   webpack(configuration) {
@@ -8,7 +9,9 @@ const config: NextConfig = {
     return configuration;
   },
   poweredByHeader: false,
-  async headers() {
+};
+if (process.env.PREMORTEM_STATIC_EXPORT !== '1') {
+  config.headers = async () => {
     return [
       {
         source: '/(.*)',
@@ -24,6 +27,6 @@ const config: NextConfig = {
         ],
       },
     ];
-  },
-};
+  };
+}
 export default config;

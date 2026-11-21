@@ -33,10 +33,10 @@ const manifest = await inspectAction({
           </div>
           <div>
             <h3>Local Agentic Wallet adapter</h3>
-            <pre>{`pnpm premortem doctor --from 0x…
-pnpm premortem inspect --from 0x… --to 0x… --data 0x --value 0
-pnpm premortem capsule prepare --file premortem-action.json
-pnpm premortem execute --file premortem-action.json`}</pre>
+            <pre>{`pnpm nexora doctor --from 0x…
+pnpm nexora inspect --from 0x… --to 0x… --data 0x --value 0
+pnpm nexora capsule prepare --file premortem-action.json
+pnpm nexora execute --file premortem-action.json`}</pre>
           </div>
         </div>
         <Notice>
@@ -96,6 +96,16 @@ pnpm premortem execute --file premortem-action.json`}</pre>
           The complete source package includes <code>packages/agent-skill/SKILL.md</code>, contract
           tests, deployment guards, a reproducible CI workflow and operational documentation.
         </p>
+      </section>
+      <section className="panel">
+        <h2>Mainnet operator</h2>
+        <p>
+          The deployment page prepares the exact tested creation transaction, requests a separate
+          MetaMask confirmation, and verifies the resulting code and receipt.
+        </p>
+        <a className="button outline" href="/deploy">
+          Open mainnet deployment
+        </a>
       </section>
     </div>
   );

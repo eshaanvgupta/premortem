@@ -68,7 +68,9 @@ export function MyProof() {
           events.map((e) => (
             <div className="timeline-row" key={`${e.transactionHash}-${e.logIndex}`}>
               <span className="mono accent">{e.eventName}</span>
-              <Link href={`/arena/${e.args.capsuleId}`}>Capsule #{String(e.args.capsuleId)}</Link>
+              <Link href={`/capsule?id=${e.args.capsuleId}`}>
+                Capsule #{String(e.args.capsuleId)}
+              </Link>
               <Hash value={e.transactionHash} kind="tx" />
             </div>
           ))

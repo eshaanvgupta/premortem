@@ -1,5 +1,5 @@
 {
-  "name": "premortem",
+  "name": "nexora",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@11.25.0",
@@ -24,7 +24,12 @@
     "prepare:mainnet": "node scripts/mainnet.mjs prepare",
     "verify:mainnet": "node scripts/mainnet.mjs verify",
     "secret:scan": "node scripts/secret-scan.mjs",
-    "premortem": "pnpm --filter @premortem/cli exec tsx src/index.ts"
+    "premortem": "pnpm --filter @premortem/cli exec tsx src/index.ts",
+    "build:static": "node scripts/build-static.mjs",
+    "test:deployment": "node scripts/deployment-e2e.mjs",
+    "prepare:deployment": "node scripts/deployment-package.mjs",
+    "build:production": "node scripts/build-static.mjs --mainnet",
+    "nexora": "pnpm --filter @premortem/cli exec tsx src/index.ts"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",

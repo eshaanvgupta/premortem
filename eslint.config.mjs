@@ -15,6 +15,7 @@ export default tseslint.config(
       'test-results/**',
       'artifacts/**',
       'release/**',
+      'wallet-plugin/**',
     ],
   },
   js.configs.recommended,

@@ -34,6 +34,7 @@ const allowedFiles = new Set([
   'eslint.config.mjs',
   'playwright.config.ts',
   'playwright.protocol.config.ts',
+  'playwright.deployment.config.ts',
   'AGENTS.md',
 ]);
 const forbidden = new Set([
@@ -146,7 +147,7 @@ for (const required of [
     throw new Error(`Required release input missing: ${required}`);
 }
 const manifest = {
-  format: 'premortem-source-release/1',
+  format: 'nexora-source-release/1',
   protocolVersion: 'PREMORTEM/1',
   broadcastOrPublish: false,
   reproducibility:
@@ -212,7 +213,7 @@ try {
   if (error.code !== 'ENOENT') throw error;
 }
 await mkdir(output, { recursive: true });
-for (const name of ['premortem-source.tar.gz', 'source-manifest.json', 'source-checksum.json']) {
+for (const name of ['nexora-source.tar.gz', 'source-manifest.json', 'source-checksum.json']) {
   try {
     if ((await lstat(join(output, name))).isSymbolicLink())
       throw new Error('Refusing symbolic-link release file.');
@@ -220,16 +221,16 @@ for (const name of ['premortem-source.tar.gz', 'source-manifest.json', 'source-c
     if (error.code !== 'ENOENT') throw error;
   }
 }
-await writeFile(join(output, 'premortem-source.tar.gz'), archive);
+await writeFile(join(output, 'nexora-source.tar.gz'), archive);
 await writeFile(join(output, 'source-manifest.json'), manifestBytes);
 await writeFile(
   join(output, 'source-checksum.json'),
-  `${JSON.stringify({ archive: 'premortem-source.tar.gz', sha256: archiveHash, bytes: archive.length, files: entries.length }, null, 2)}\n`,
+  `${JSON.stringify({ archive: 'nexora-source.tar.gz', sha256: archiveHash, bytes: archive.length, files: entries.length }, null, 2)}\n`,
 );
 console.log(
   JSON.stringify(
     {
-      archive: 'release/premortem-source.tar.gz',
+      archive: 'release/nexora-source.tar.gz',
       sha256: archiveHash,
       bytes: archive.length,
       files: entries.length,

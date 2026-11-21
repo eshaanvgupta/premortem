@@ -1,0 +1,19 @@
+{
+  "product": "NEXORA",
+  "chainId": 56,
+  "address": "0x042632f7476D6293145D13d17CD8834922Eb2F39",
+  "sourcify": {
+    "status": "VERIFIED_MATCH",
+    "creationMatch": "match",
+    "runtimeMatch": "match",
+    "verificationId": "938ac822-471b-4096-b701-483c3a50dec7",
+    "url": "https://repo.sourcify.dev/56/0x042632f7476D6293145D13d17CD8834922Eb2F39"
+  },
+  "bscscan": {
+    "status": "SUBMITTED_FINAL_STATUS_UNCONFIRMED",
+    "verificationId": "mzj3jz88k1saqrbyqfrbg5lj1abrjb4zuruckbszmjzqawdy23",
+    "url": "https://bscscan.com/address/0x042632f7476D6293145D13d17CD8834922Eb2F39#code",
+    "submissionVia": "Sourcify automatic external verification",
+    "confirmationBlocker": "Explorer page returns HTTP403; status API requires an operator-owned API key."
+  }
+}

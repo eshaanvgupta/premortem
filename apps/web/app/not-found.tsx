@@ -6,7 +6,7 @@ export default function NotFound() {
       <h1>
         404<span className="accent">_</span>
       </h1>
-      <pre>premortem: requested future does not exist</pre>
+      <pre>nexora: requested future does not exist</pre>
       <p>The evidence trail ends here. Return to mission control.</p>
       <Link className="button" href="/">
         Back to the Rift

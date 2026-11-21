@@ -75,7 +75,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <Link className="brand" href="/">
             <LogoMark small />
             <span>
-              PREMORTEM<span className="brand-sup">PROTOCOL / 01</span>
+              NEXORA<span className="brand-sup">PROTOCOL / 01</span>
             </span>
           </Link>
           <nav className={menu ? 'nav open' : 'nav'} aria-label="Main navigation">
@@ -127,7 +127,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <div className="footer-top">
             <Link className="brand" href="/">
               <LogoMark small />
-              PREMORTEM
+              NEXORA
             </Link>
             <p>Let the future fail before it happens.</p>
             <span className="mono">BUILT FOR CONSEQUENCES.</span>

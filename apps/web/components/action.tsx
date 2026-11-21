@@ -175,8 +175,8 @@ export function ActionPanel({
         </button>
       </div>
       <pre className="command-block">
-        pnpm premortem capsule prepare --file premortem-action.json{'\n'}pnpm premortem execute
-        --file premortem-action.json
+        pnpm nexora capsule prepare --file premortem-action.json{'\n'}pnpm nexora execute --file
+        premortem-action.json
       </pre>
       <p className="fine">
         Never upload login sessions, pairing codes, seed phrases or private keys. Developer Mode

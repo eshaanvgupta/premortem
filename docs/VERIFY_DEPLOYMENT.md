@@ -1,6 +1,6 @@
 # Deployment and verification runbook
 
-**Current status: no operator-authorized contract deployment or website publication. GitHub source publication is authorized.** The user's instruction prohibits all contract deployment until explicit authorization. Embedded local EVM tests may construct test contracts as test fixtures; no wallet or network broadcast is authorized by that testing. Do not run a broadcast command merely because it appears in this runbook.
+**Current status: mainnet deployment and public hosting were authorized on 21 November 2026 and completed.** The deployed registry is `0x042632f7476D6293145D13d17CD8834922Eb2F39`, transaction `0xca409953042c1bea3ab9da3e73969f82d3bf3d84204c2cd57bf766c9faabd259`, block 134836356. NEXORA retains the immutable `PREMORTEM/1` protocol domain. Use this runbook for verification or a separately intended fresh deployment; the product rename does not require another deployment.
 
 ## Before asking for approval
 
@@ -32,6 +32,6 @@ API verification keys are optional when manual BscScan verification is used. Pub
 
 ## Source package and container
 
-`node scripts/release.mjs` creates `release/premortem-source.tar.gz`, a SHA-256 file manifest and archive checksum. It includes source, lockfile, generated public verification package, reports and actual screenshots. It excludes installed dependencies, all `.next*` outputs/caches, downloaded tooling/research, private environment files, credential formats, logs and symlinks. It never publishes or deploys. Identical input bytes give identical archive bytes; rerun after final changes. The secret-pattern check is an additional safeguard, not a complete credential audit.
+`node scripts/release.mjs` creates `release/nexora-source.tar.gz`, a SHA-256 file manifest and archive checksum. It includes source, lockfile, generated public verification package, reports and actual screenshots. It excludes installed dependencies, all `.next*` outputs/caches, downloaded tooling/research, private environment files, credential formats, logs and symlinks. It never publishes or deploys. Identical input bytes give identical archive bytes; rerun after final changes. The secret-pattern check is an additional safeguard, not a complete credential audit.
 
 With Docker available, `docker compose up --build` builds the lockfile-pinned Node 24 / pnpm 11 image and binds the website to local `127.0.0.1:3000`. The server binds `0.0.0.0` inside its container. Only public `NEXT_PUBLIC_*` configuration is accepted as build arguments; no wallet/deployer credentials are copied. Public environment values are embedded by the Next.js build and need a rebuild after changes. The container runs as the unprivileged Node user with a read-only health probe. The initial runtime image retains the installed workspace dependency tree, including development dependencies, to preserve reliable pnpm/Next.js resolution; it is not a minimal standalone image. A Docker daemon is an external local tooling requirement; do not claim a successful container build unless actually executed.

@@ -1,5 +1,6 @@
 import { getAddress, isAddress, type Address } from 'viem';
 export const AGENT_ID = getAddress('0x60b9262456de011f7d15a54cdd8c48baaa8b022f');
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 const candidate = process.env.NEXT_PUBLIC_PREMORTEM_REGISTRY;
 export const REGISTRY: Address | undefined =
   candidate && isAddress(candidate) ? getAddress(candidate) : undefined;

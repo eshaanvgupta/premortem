@@ -6,11 +6,11 @@ export default function Page() {
   return (
     <div className="page prose-page">
       <PageIntro kicker="THE TRUST MODEL / READ BEFORE SIGNING" title="KEEP THE LIMITS VISIBLE.">
-        Evidence is useful when its provenance and uncertainty travel with it. PREMORTEM provides an
+        Evidence is useful when its provenance and uncertainty travel with it. NEXORA provides an
         accountable review trail, not a security guarantee.
       </PageIntro>
       <Notice tone="warning">
-        PREMORTEM never executes the proposed action. Approved and Rejected are advisory community
+        NEXORA never executes the proposed action. Approved and Rejected are advisory community
         outcomes. You remain free to act outside the protocol.
       </Notice>
       <section className="panel">
@@ -75,7 +75,7 @@ export default function Page() {
             contract-call scope. Set its own limits and expiry. This website cannot enable it.
           </li>
           <li>
-            Download a PREMORTEM action file. Run local doctor and prepare. Inspect the destination,
+            Download a NEXORA action file. Run local doctor and prepare. Inspect the destination,
             parameters, chain 56, zero BNB transfer value and expected network gas.
           </li>
           <li>
@@ -86,7 +86,7 @@ export default function Page() {
         </ol>
         <Notice>
           No website QR login, pairing code collection, server wallet sessions or private-key fields
-          exist. Ordinary personal_sign is unsupported by Agentic Wallet; PREMORTEM does not request
+          exist. Ordinary personal_sign is unsupported by Agentic Wallet; NEXORA does not request
           it.
         </Notice>
       </section>

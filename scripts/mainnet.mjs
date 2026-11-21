@@ -7,8 +7,14 @@ import { runContracts } from './contracts.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const contractRoot = path.join(root, 'packages/contracts');
 const requireCore = createRequire(path.join(root, 'packages/core/package.json'));
-const { getAddress, keccak256, encodeAbiParameters, encodeFunctionData, parseAbi } =
-  requireCore('viem');
+const {
+  getAddress,
+  getContractAddress,
+  keccak256,
+  encodeAbiParameters,
+  encodeFunctionData,
+  parseAbi,
+} = requireCore('viem');
 const official = getAddress('0x60b9262456de011f7d15a54cdd8c48baaa8b022f');
 const endpoint = process.env.BSC_RPC_URL || 'https://bsc-dataseed-public.bnbchain.org';
 const rpcUrl = new URL(endpoint);
@@ -106,7 +112,7 @@ function officialRuntime(artifact) {
 }
 
 async function main() {
-  const mode = process.argv[2];
+  let mode = process.argv[2];
   if (mode !== 'prepare' && mode !== 'verify')
     throw new Error('Use prepare or verify. This tool never signs or broadcasts.');
   await runContracts('test');
@@ -125,6 +131,16 @@ async function main() {
   )
     throw new Error('Compiler/settings mismatch.');
   const network = await networkChecks();
+  const manifestFile =
+    process.env.DEPLOYMENT_MANIFEST || path.join(contractRoot, 'deployments/mainnet.json');
+  if (mode === 'prepare') {
+    try {
+      await readFile(manifestFile, 'utf8');
+      mode = 'verify';
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error;
+    }
+  }
   if (mode === 'prepare') {
     const bundle = path.join(root, 'release/mainnet');
     await mkdir(bundle, { recursive: true });
@@ -205,8 +221,6 @@ async function main() {
     console.log(JSON.stringify(report, null, 2));
     return;
   }
-  const manifestFile =
-    process.env.DEPLOYMENT_MANIFEST || path.join(contractRoot, 'deployments/mainnet.json');
   let manifest;
   if (process.env.DEPLOYMENT_TRANSACTION) {
     if (!/^0x[0-9a-f]{64}$/i.test(process.env.DEPLOYMENT_TRANSACTION)) {
@@ -230,6 +244,22 @@ async function main() {
   if (manifest.chainId !== 56 || !/^0x[0-9a-f]{64}$/i.test(manifest.transactionHash))
     throw new Error('Invalid mainnet deployment manifest.');
   const receipt = await rpc('eth_getTransactionReceipt', [manifest.transactionHash]);
+  const transaction = await rpc('eth_getTransactionByHash', [manifest.transactionHash]);
+  const creationInput =
+    artifact.bytecode.object + encodeAbiParameters([{ type: 'address' }], [official]).slice(2);
+  if (
+    !transaction ||
+    transaction.to !== null ||
+    BigInt(transaction.value) !== 0n ||
+    transaction.input.toLowerCase() !== creationInput.toLowerCase() ||
+    getContractAddress({
+      from: getAddress(transaction.from),
+      nonce: BigInt(transaction.nonce),
+    }).toLowerCase() !== address.toLowerCase()
+  )
+    throw new Error(
+      'Transaction input, value or predicted creation address differs from the tested deployment.',
+    );
   if (
     !receipt ||
     receipt.status !== '0x1' ||
@@ -257,9 +287,35 @@ async function main() {
     await mkdir(path.dirname(manifestFile), { recursive: true });
     await writeFile(
       manifestFile,
-      `${JSON.stringify({ ...manifest, protocolVersion: 'PREMORTEM/1', officialAgentId: official, deploymentBlock: BigInt(receipt.blockNumber).toString(), deploymentBlockHash: receipt.blockHash, compiler: artifact.metadata.compiler.version, runtimeCodeHash: keccak256(code), bscScanSourceVerification: 'NOT_ESTABLISHED' }, null, 2)}\n`,
+      `${JSON.stringify({ ...manifest, protocolVersion: 'PREMORTEM/1', deployer: getAddress(transaction.from), officialAgentId: official, deploymentBlock: BigInt(receipt.blockNumber).toString(), deploymentBlockHash: receipt.blockHash, compiler: artifact.metadata.compiler.version, runtimeCodeHash: keccak256(code), gasUsed: BigInt(receipt.gasUsed).toString(), deploymentFeeWei: (BigInt(receipt.gasUsed) * BigInt(receipt.effectiveGasPrice)).toString(), bscScanSourceVerification: 'NOT_ESTABLISHED' }, null, 2)}\n`,
     );
   }
+  await mkdir(path.join(root, 'release/mainnet'), { recursive: true });
+  await writeFile(
+    path.join(root, 'release/mainnet/readiness.json'),
+    JSON.stringify(
+      {
+        protocolVersion: 'PREMORTEM/1',
+        state: 'DEPLOYED_ON_BSC_MAINNET',
+        chainId: 56,
+        address,
+        transactionHash: manifest.transactionHash,
+        deploymentBlock: BigInt(receipt.blockNumber).toString(),
+        deploymentBlockHash: receipt.blockHash,
+        runtimeCodeHash: keccak256(code),
+        officialAgentId: official,
+        compiler: artifact.metadata.compiler.version,
+        exactCreationInputVerified: true,
+        canonicalReceiptVerified: true,
+        minimumDescendantBlocks: 20,
+        broadcastPerformedByThisCommand: false,
+        explorerVerification: 'NOT_ESTABLISHED_BY_THIS_COMMAND',
+        checkedAt: new Date().toISOString(),
+      },
+      null,
+      2,
+    ) + '\n',
+  );
   console.log(
     JSON.stringify(
       {

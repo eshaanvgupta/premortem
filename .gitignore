@@ -21,3 +21,4 @@ artifacts/test-decision-receipt.json
 **/*-reveal-SECRET.json
 artifacts/*.tar
 artifacts/github-repository.json
+wallet-plugin/

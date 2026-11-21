@@ -83,7 +83,7 @@ test('real isolated EVM: create, independent open review, finalize, verify recei
   await createPanel.getByRole('button', { name: 'Download action file' }).click();
   await (await actionDownload).saveAs('artifacts/test-action.json');
   await confirmAction(page, createPanel);
-  await page.goto('/arena/1');
+  await page.goto('/capsule?id=1');
   await page.getByLabel('Action manifest JSON').setInputFiles('artifacts/test-manifest.json');
   await expect(
     page.getByText('Manifest integrity matches the anchored capsule. This does not prove safety.'),
@@ -163,7 +163,7 @@ test('real isolated EVM: create, independent open review, finalize, verify recei
   ]);
   expect((await rpc('eth_getTransactionReceipt', [tx])).status).toBe('0x1');
   await clock(page);
-  await page.goto('/arena/2');
+  await page.goto('/capsule?id=2');
   await selectWallet(page, 1);
   await page.getByLabel('Actual Agent ID-holding signing address').fill(fixture.accounts[1]);
   await page.getByLabel('Verdict').selectOption('2');

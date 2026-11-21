@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-11-21T06:01:52.916Z",
+  "chainId": 56,
+  "readOnly": true,
+  "establishesProtocolCoverage": false,
+  "results": [
+    {
+      "endpoint": "https://bsc-rpc.publicnode.com",
+      "status": "LOG_AND_RECEIPT_MATCH",
+      "probeBlock": "134835628",
+      "blockHash": "0x14b6d1700506a0c91c1886073102517085e0e5f16140eb02baa65288b67bec20",
+      "logCount": 113,
+      "sampleTransaction": "0x49360685de19bed9e7299d1423ec10c916a4711d879d803398f8c33a0d529e63"
+    },
+    {
+      "endpoint": "https://rpc-bnb.blockmachine.io",
+      "status": "LOG_AND_RECEIPT_MATCH",
+      "probeBlock": "134835629",
+      "blockHash": "0x6055bf3103b53720964e2867e496a704530e95c9ee3a47cc2fd1e7e87697a765",
+      "logCount": 122,
+      "sampleTransaction": "0x1ffc3c7f033f59e77ba910d1089740fd5679f21adaee530a1d8740b97e0c2f4d"
+    }
+  ]
+}

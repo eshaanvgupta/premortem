@@ -1,6 +1,6 @@
 {
-  "archive": "premortem-source.tar.gz",
-  "sha256": "91c6e520b6598be39c1cbb5c5af1b1b7e89f6dd60bab72c169da65db56d405e1",
-  "bytes": 2011641,
-  "files": 159
+  "archive": "nexora-source.tar.gz",
+  "sha256": "f50c4d7c8b50c671f82da8b2077b04b691385ab5c2e5dfa9308b9d4687e7fce7",
+  "bytes": 3162953,
+  "files": 190
 }

@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-11-21T06:22:26.451Z",
+  "product": "NEXORA",
+  "url": "https://premortem-protocol.guppy-ai.chatgpt.site",
+  "publicUnauthenticated": true,
+  "health": {
+    "status": "ok",
+    "product": "NEXORA",
+    "protocol": "premortem/1",
+    "chainId": 56,
+    "deployed": true
+  },
+  "mainnetContract": "0x042632f7476D6293145D13d17CD8834922Eb2F39",
+  "validationTransactionsSent": 0,
+  "http": [
+    {
+      "route": "/",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/lab",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/arena",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/capsule?id=1",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/deploy",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/proof",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/recorder",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/me",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/developers",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/security",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/submission",
+      "status": 200,
+      "contentType": "text/html",
+      "csp": null,
+      "nosniff": null
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "contentType": "application/octet-stream",
+      "csp": null,
+      "nosniff": null
+    }
+  ],
+  "browser": {
+    "errors": [],
+    "checks": [
+      {
+        "device": "desktop",
+        "title": "NEXORA — Proof before action",
+        "brand": "NEXORA\nPROTOCOL / 01",
+        "documentCsp": true,
+        "horizontalOverflow": false
+      },
+      {
+        "deploymentDisabled": true,
+        "actualContractVisible": true
+      },
+      {
+        "proofText": "ADOPTION / MEASURED ON CHAIN\nLIVE PROOF.\n\nGenuine Agent ID participation, derived from confirmed holder-gated protocol events. Addresses are deduplicated; finalizers are excluded from the holder count.\n\nCOMPLETE COVERAGE\n134836356 — 134838382\nRefresh chain\nOBSERVED DISTINCT HOLDERS\n0\nINNOVATION THRESHOLD\n0 / 30\nCONFIRMED HOLDER ACTIONS\n0\nCONFIRMATION DEPTH\n20 blocks\nReproduce the count.\n\nOfficial competition window: 18 November 2026 08:00 UTC through 9 December 2026 08:00 UTC (13:30 IST). The end is exclusive. These are observed addresses, not proof of personhood or organizer-confirmed qualification.\n\nFrom (UTC)\nUntil (UTC, exclusive)\nExport evidence"
+      },
+      {
+        "device": "mobile",
+        "title": "NEXORA — Proof before action",
+        "brand": "NEXORA\nPROTOCOL / 01",
+        "documentCsp": true,
+        "horizontalOverflow": false
+      }
+    ]
+  }
+}

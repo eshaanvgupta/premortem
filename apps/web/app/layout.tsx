@@ -33,13 +33,19 @@ const mono = localFont({
   variable: '--font-mono',
 });
 export const metadata: Metadata = {
-  title: { default: 'PREMORTEM — Proof before action', template: '%s | PREMORTEM' },
+  title: { default: 'NEXORA — Proof before action', template: '%s | NEXORA' },
   description:
     'Agent ID-native adversarial preflight and verifiable decisions on BNB Smart Chain. Let the future fail before it happens.',
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https: http://127.0.0.1:* http://localhost:*; object-src 'none'; base-uri 'self'; form-action 'self'"
+        />
+      </head>
       <body className={`${display.variable} ${text.variable} ${mono.variable}`}>
         <Shell>{children}</Shell>
       </body>

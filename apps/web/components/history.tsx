@@ -89,8 +89,8 @@ export function History({ mode = 'arena' }: { mode?: 'arena' | 'recorder' | 'pro
       </PageIntro>
       {!REGISTRY ? (
         <Empty title="Registry awaiting deployment">
-          No PREMORTEM contract has been configured. No capsules or participant counts can be
-          reported yet. Read-only preflight is available in the Lab.
+          No NEXORA contract has been configured. No capsules or participant counts can be reported
+          yet. Read-only preflight is available in the Lab.
         </Empty>
       ) : q.isPending ? (
         <div className="skeleton" role="status">
@@ -293,7 +293,7 @@ export function History({ mode = 'arena' }: { mode?: 'arena' | 'recorder' | 'pro
                           </span>
                         </div>
                         <h2>
-                          <Link href={`/arena/${a.capsuleId}`}>{String(a.label)}</Link>
+                          <Link href={`/capsule?id=${a.capsuleId}`}>{String(a.label)}</Link>
                         </h2>
                         <p className="mono fine">ACTION {String(a.actionHash)}</p>
                         <p className="fine">
@@ -304,7 +304,7 @@ export function History({ mode = 'arena' }: { mode?: 'arena' | 'recorder' | 'pro
                           <Hash value={String(a.actor)} />
                           <span>{e.confirmed ? 'CONFIRMED' : 'PENDING FINALITY'}</span>
                         </div>
-                        <Link className="text-link" href={`/arena/${a.capsuleId}`}>
+                        <Link className="text-link" href={`/capsule?id=${a.capsuleId}`}>
                           Enter War Room
                         </Link>
                       </article>
@@ -315,7 +315,7 @@ export function History({ mode = 'arena' }: { mode?: 'arena' | 'recorder' | 'pro
                           <span className="mono accent">{e.eventName}</span>
                           <h3>
                             Capsule{' '}
-                            <Link href={`/arena/${a.capsuleId}`}>#{String(a.capsuleId)}</Link>
+                            <Link href={`/capsule?id=${a.capsuleId}`}>#{String(a.capsuleId)}</Link>
                           </h3>
                           <p>
                             <Hash value={String(a.actor)} /> · block {e.blockNumber.toString()} ·{' '}

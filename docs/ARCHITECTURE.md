@@ -1,6 +1,6 @@
 # Architecture
 
-PREMORTEM anchors public action/evidence hashes and independent Agent ID reviewer decisions. It never executes the proposed transaction. A deterministic preflight manifest and a community decision answer different questions: the first records RPC observations and explicit heuristics; the second records opinions from eligible accounts.
+NEXORA anchors public action/evidence hashes and independent Agent ID reviewer decisions. It never executes the proposed transaction. A deterministic preflight manifest and a community decision answer different questions: the first records RPC observations and explicit heuristics; the second records opinions from eligible accounts.
 
 ```mermaid
 flowchart LR
@@ -9,7 +9,7 @@ flowchart LR
   RPC --> ID[Official Agent ID balanceOf]
   RPC --> REG[Immutable PremortemRegistry]
   UI --> FILE[Scoped local action JSON]
-  FILE --> CLI[Trusted local PREMORTEM CLI]
+  FILE --> CLI[Trusted local NEXORA CLI]
   CLI --> SETTINGS[Official baw settings]
   SETTINGS --> PREVIEW[Official baw preview]
   PREVIEW --> HUMAN[Human terminal confirmation]

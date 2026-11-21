@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { PageIntro, Notice, Hash } from '../../components/ui';
-import { REGISTRY } from '../../lib/config';
+import { REGISTRY, SITE_URL } from '../../lib/config';
 export const metadata = { title: 'Judges / Submission' };
 export default function Page() {
   return (
     <div className="page prose-page">
       <PageIntro kicker="JUDGES DOSSIER / HONEST STATUS" title="PROOF BEFORE ACTION.">
-        PREMORTEM is an Agent ID-native preflight and adversarial review protocol for proposed
+        NEXORA is an Agent ID-native preflight and adversarial review protocol for proposed
         consequential on-chain actions.
       </PageIntro>
       <Notice tone="warning">
@@ -28,7 +28,7 @@ export default function Page() {
             </a>
           </dd>
           <dt>Public site</dt>
-          <dd>Awaiting authorized publication</dd>
+          <dd>{SITE_URL ? <a href={SITE_URL}>{SITE_URL}</a> : 'Not configured in this build'}</dd>
           <dt>Genuine eligible holders</dt>
           <dd>
             <Link href="/proof">Inspect live event coverage and measured count</Link>

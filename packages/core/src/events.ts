@@ -1,6 +1,6 @@
 import { decodeEventLog, type Address, type Hex } from 'viem';
 import { REGISTRY_ABI } from './abi';
-import { assertBsc, createBscClient, safeRpcError, toRpcClient, type RpcClient } from './client';
+import { assertBsc, createBscLogClient, safeRpcError, toRpcClient, type RpcClient } from './client';
 import { COMPETITION_END, COMPETITION_START, FINALITY_BLOCKS } from './constants';
 import { addressSchema } from './schema';
 
@@ -51,7 +51,7 @@ export interface ScanOptions {
 export const hexQuantity = (value: bigint): Hex => `0x${value.toString(16)}`;
 export async function scanProtocolEvents(options: ScanOptions): Promise<EventScan> {
   const address = addressSchema.parse(options.address);
-  const client = options.client ?? toRpcClient(createBscClient(options.rpcUrls));
+  const client = options.client ?? toRpcClient(createBscLogClient(options.rpcUrls));
   await assertBsc(client);
   const head = await client.request({ method: 'eth_blockNumber' });
   if (typeof head !== 'string') throw new Error('RPC returned invalid latest block');
@@ -214,7 +214,7 @@ export async function scanProtocolEvents(options: ScanOptions): Promise<EventSca
 export async function syncProtocolEvents(
   options: ScanOptions & { previous?: EventScan | null; cacheKey?: string },
 ): Promise<EventScan> {
-  const client = options.client ?? toRpcClient(createBscClient(options.rpcUrls));
+  const client = options.client ?? toRpcClient(createBscLogClient(options.rpcUrls));
   await assertBsc(client);
   const address = addressSchema.parse(options.address);
   let previous =

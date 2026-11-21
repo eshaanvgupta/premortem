@@ -1,9 +1,9 @@
 ---
 name: premortem
-description: Inspect proposed BSC actions and prepare, review, or verify PREMORTEM capsules using the user's trusted local Agentic Wallet environment.
+description: Inspect proposed BSC actions and prepare, review, or verify NEXORA capsules using the user's trusted local Agentic Wallet environment.
 ---
 
-# PREMORTEM local agent skill
+# NEXORA local agent skill
 
 This is an independent project skill, not an official Binance skill. Install this directory inside your own trusted agent runtime. Run the repository's `pnpm premortem` wrapper or the built `packages/cli/dist/index.cjs`; no server has wallet access.
 
@@ -15,10 +15,10 @@ Agent ID is the competition's specific nontransferable ERC-721 at `0x60b9262456d
 
 ## Read-only workflow
 
-1. Run `pnpm premortem doctor --from <actual-agentic-wallet-address>` after configuring the verified deployment through `PREMORTEM_REGISTRY` and independently authenticated runtime hash `PREMORTEM_CODE_HASH` in the local environment.
-2. Inspect exact bytes: `pnpm premortem inspect --from <address> --to <address> --data <hex> --value 0`.
+1. Run `pnpm nexora doctor --from <actual-agentic-wallet-address>` after configuring the verified deployment through `PREMORTEM_REGISTRY` and independently authenticated runtime hash `PREMORTEM_CODE_HASH` in the local environment.
+2. Inspect exact bytes: `pnpm nexora inspect --from <address> --to <address> --data <hex> --value 0`.
 3. Explain deterministic findings, simulation failures, uncertainty, provenance, and limitations. Do not invent probability estimates or call an action safe.
-4. Use `pnpm premortem capsule prepare --file action.json` to print exact protocol calldata, destination, network, zero transfer value, hash, gas estimate, and parameters. Preparation signs nothing.
+4. Use `pnpm nexora capsule prepare --file action.json` to print exact protocol calldata, destination, network, zero transfer value, hash, gas estimate, and parameters. Preparation signs nothing.
 
 ## Write workflow — confirmation always required
 
@@ -32,7 +32,7 @@ Read the current [official external-sign guide](https://github.com/binance/binan
 6. Execute only the request ID returned by that successful, unexpired preview. Every renewed preview needs fresh human confirmation. A failed, blocked, expired, or unknown preview must never execute. The wrapper requires a parsed matching destination and zero value and compares every recognized echoed sender/network/calldata field; opaque or incompatible schemas block. Omitted raw fields remain bound by the trusted official backend request ID, not a cryptographic proof. Do not retry ambiguous execute responses automatically.
 7. Honor `PENDING_CONFIRMATION`: ask the user to approve in the official App. It is not a confirmed transaction. Never claim success until the transaction receipt is successful, belongs to the configured protocol, has sufficient confirmations, and its block hash still agrees with the RPC. The wrapper waits for 20 descendant blocks after broadcast, verifies protocol event evidence and runtime against the pinned hash at the receipt block; `premortem receipt --hash <hash>` resumes a later check.
 
-An advisory Approved outcome never authorizes execution of the proposed action. That action remains outside PREMORTEM and requires an independent wallet review and authorization. Do not recruit fake users or generate dummy on-chain activity.
+An advisory Approved outcome never authorizes execution of the proposed action. That action remains outside NEXORA and requires an independent wallet review and authorization. Do not recruit fake users or generate dummy on-chain activity.
 
 ## Action file
 

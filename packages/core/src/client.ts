@@ -19,6 +19,23 @@ export function createBscClient(rpcUrls: readonly string[] = DEFAULT_RPC_URLS) {
     ),
   });
 }
+/** Official dataseed hosts document disabled logs and can return misleading empty arrays. */
+export function logRpcUrls(rpcUrls: readonly string[] = DEFAULT_RPC_URLS): string[] {
+  const supported = rpcUrls.filter(
+    (raw) =>
+      !/^bsc-dataseed(?:[0-9]+|-public)?\.(?:bnbchain\.org|binance\.org)$/i.test(
+        new URL(raw).hostname,
+      ),
+  );
+  if (!supported.length)
+    throw new Error(
+      'Configure a log-capable BSC RPC. Official dataseed endpoints are excluded from event indexing.',
+    );
+  return supported;
+}
+export function createBscLogClient(rpcUrls?: readonly string[]) {
+  return createBscClient(logRpcUrls(rpcUrls));
+}
 export function toRpcClient(client: unknown): RpcClient {
   return client as RpcClient;
 }

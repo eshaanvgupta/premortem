@@ -1,4 +1,4 @@
-/** Original open-branch mark: an observed path and a deliberately separated alternative. */
+/** Original split N mark: an observed path and a deliberately separated alternative. */
 export function LogoMark({ small = false }: { small?: boolean }) {
   return (
     <svg
@@ -7,14 +7,9 @@ export function LogoMark({ small = false }: { small?: boolean }) {
       fill="none"
       aria-hidden="true"
     >
+      <path d="M10 40V8l12 15" stroke="currentColor" strokeWidth="5.5" strokeLinecap="square" />
       <path
-        d="M10 40V8M10 24h12L38 8"
-        stroke="currentColor"
-        strokeWidth="5.5"
-        strokeLinecap="square"
-      />
-      <path
-        d="m27 29 11 11"
+        d="m27 29 11 11V8"
         stroke="currentColor"
         strokeWidth="5.5"
         strokeLinecap="square"

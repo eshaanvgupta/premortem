@@ -151,8 +151,8 @@ export default function Home() {
         </h2>
         <div>
           <p>
-            PREMORTEM reviews proposed actions. It never executes them, takes custody, or grants
-            token approvals. A community verdict is advice, and uncertainty stays visible.
+            NEXORA reviews proposed actions. It never executes them, takes custody, or grants token
+            approvals. A community verdict is advice, and uncertainty stays visible.
           </p>
           <Link href="/security" className="button outline">
             Read the security model <Terminal size={17} />

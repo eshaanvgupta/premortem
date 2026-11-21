@@ -1,4 +1,4 @@
-name: Validate PREMORTEM
+name: Validate NEXORA
 
 on:
   push:
@@ -73,6 +73,10 @@ jobs:
           pnpm lighthouse
       - name: Build Docker image without secrets or publishing
         run: docker build --tag premortem:ci .
+      - name: Static hosting build and isolated contract creation workflow
+        run: |
+          pnpm build:static
+          pnpm test:deployment
       - name: Produce local source deployment package
         run: node scripts/release.mjs
       - name: Upload verification artifacts

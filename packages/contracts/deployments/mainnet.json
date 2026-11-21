@@ -1,0 +1,15 @@
+{
+  "chainId": 56,
+  "address": "0x042632f7476d6293145d13d17cd8834922eb2f39",
+  "transactionHash": "0xca409953042c1bea3ab9da3e73969f82d3bf3d84204c2cd57bf766c9faabd259",
+  "protocolVersion": "PREMORTEM/1",
+  "deployer": "0x342807b11b9270fef1986Ea09610d3cb45e2eA0a",
+  "officialAgentId": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+  "deploymentBlock": "134836356",
+  "deploymentBlockHash": "0xad6afabfbb0370cf547c9b8adb280309fc066b2bae76b3e59d76ab40a1523a09",
+  "compiler": "0.8.39+commit.ce47f2c8",
+  "runtimeCodeHash": "0x75f282f00279ca552e0ff2a4ec944f96b24815466582339548a62e98f2e05e14",
+  "gasUsed": "1626256",
+  "deploymentFeeWei": "81312800000000",
+  "bscScanSourceVerification": "NOT_ESTABLISHED"
+}

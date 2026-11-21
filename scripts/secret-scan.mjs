@@ -11,6 +11,7 @@ const ignored = new Set([
   'artifacts',
   'test-results',
   'playwright-report',
+  'wallet-plugin',
 ]);
 let failures = 0;
 let checked = 0;
