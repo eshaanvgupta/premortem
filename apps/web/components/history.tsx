@@ -312,7 +312,7 @@ export function History({ mode = 'arena' }: { mode?: 'arena' | 'recorder' | 'pro
                       <article className="event" key={`${e.transactionHash}-${e.logIndex}`}>
                         <span className="event-mark" />
                         <div>
-                          <span className="mono gold">{e.eventName}</span>
+                          <span className="mono accent">{e.eventName}</span>
                           <h3>
                             Capsule{' '}
                             <Link href={`/arena/${a.capsuleId}`}>#{String(a.capsuleId)}</Link>

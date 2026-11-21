@@ -112,4 +112,4 @@ Public hosting/source publication, a funded user-controlled signer, gas and 30 g
 
 ## License
 
-MIT. Self-hosted Unbounded, Space Grotesk and IBM Plex Mono assets come from their Fontsource packages under SIL Open Font License; preserve their package license notices when redistributing fonts. Lucide is ISC. Third-party dependencies retain their respective licenses.
+MIT. Self-hosted Barlow Condensed, Instrument Sans and Geist Mono assets come from their Fontsource packages under SIL Open Font License; preserve their package license notices when redistributing fonts. Lucide is ISC. Third-party dependencies retain their respective licenses.

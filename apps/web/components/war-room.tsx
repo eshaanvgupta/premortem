@@ -417,7 +417,7 @@ export function WarRoom({ id }: { id: string }) {
               {records.length ? (
                 records.map((e) => (
                   <div className="timeline-row" key={`${e.transactionHash}-${e.logIndex}`}>
-                    <span className="mono gold">{e.eventName}</span>
+                    <span className="mono accent">{e.eventName}</span>
                     <Hash value={String(e.args.actor)} />
                     <Hash value={e.transactionHash} kind="tx" />
                     <Raw value={e.args} label="Event details" />

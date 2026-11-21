@@ -72,7 +72,7 @@ export function PageIntro({
   return (
     <div className="page-intro">
       <div className="eyebrow">
-        <span className="gold-line" />
+        <span className="accent-line" />
         {kicker}
       </div>
       <h1>{title}</h1>

@@ -6,26 +6,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Activity, Command, ExternalLink, Menu, ShieldCheck, X } from 'lucide-react';
 import { usePreferences } from '../lib/state';
 import { REGISTRY } from '../lib/config';
+import { LogoMark } from './logo';
 const nav = [
   ['/lab', 'Preflight Lab'],
   ['/arena', 'The Arena'],
   ['/recorder', 'Flight Recorder'],
   ['/proof', 'Live Proof'],
 ];
-export function Prism({ small = false }: { small?: boolean }) {
-  return (
-    <svg
-      className={small ? 'prism small' : 'prism'}
-      viewBox="0 0 48 48"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path d="M24 3 43 14v20L24 45 5 34V14Z" stroke="currentColor" strokeWidth="3" />
-      <path d="m24 11 11 7-4 17-18-7 3-11Z" fill="currentColor" />
-      <path d="m5 34 13-9M24 3v18m19 13-19-9" stroke="#0b0e11" strokeWidth="3" />
-    </svg>
-  );
-}
 export function Shell({ children }: { children: React.ReactNode }) {
   const [client] = useState(
     () =>
@@ -86,7 +73,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </a>
         <header className="header">
           <Link className="brand" href="/">
-            <Prism small />
+            <LogoMark small />
             <span>
               PREMORTEM<span className="brand-sup">PROTOCOL / 01</span>
             </span>
@@ -139,7 +126,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <footer>
           <div className="footer-top">
             <Link className="brand" href="/">
-              <Prism small />
+              <LogoMark small />
               PREMORTEM
             </Link>
             <p>Let the future fail before it happens.</p>

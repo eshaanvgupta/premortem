@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Radar, ScanLine, Fingerprint, GitBranch, Shield, Terminal } from 'lucide-react';
-import { Prism } from '../components/shell';
 import { HomeLive } from '../components/live';
 import { RiftEffect } from '../components/rift-effect';
 export default function Home() {
@@ -11,7 +10,7 @@ export default function Home() {
         <div className="hero-grid" />
         <div className="hero-content">
           <div className="eyebrow">
-            <span className="gold-line" /> AUTONOMOUS AGENTS. ACCOUNTABLE DECISIONS.
+            <span className="accent-line" /> AUTONOMOUS AGENTS. ACCOUNTABLE DECISIONS.
           </div>
           <h1>
             LET THE
@@ -26,7 +25,7 @@ export default function Home() {
             <br />
             <span className="outline-text">BEFORE IT</span>
             <br />
-            HAPPENS<span className="gold">.</span>
+            HAPPENS<span className="accent">.</span>
           </h1>
           <p className="hero-description">
             Every action has a future.
@@ -46,21 +45,37 @@ export default function Home() {
             AUTHORIZATION
           </div>
         </div>
-        <div className="hero-art" aria-label="Illustrative protocol prism">
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
+        <div className="hero-art" aria-label="Illustrative branching signal paths">
+          <div className="signal-field" />
           <div className="art-coordinate coord-top">
             RISK IS A BRANCH.
             <br />
             NOT A NUMBER.
           </div>
-          <div className="sculpture">
-            <div className="prism-layer layer-a" />
-            <div className="prism-layer layer-b" />
-            <div className="prism-layer layer-c" />
-            <Prism />
-            <div className="scan-beam" />
-          </div>
+          <svg className="signal-scene" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="signal-fade" x1="70" x2="550" gradientUnits="userSpaceOnUse">
+                <stop stopColor="currentColor" stopOpacity="0" />
+                <stop offset=".25" stopColor="currentColor" />
+                <stop offset="1" stopColor="currentColor" stopOpacity=".85" />
+              </linearGradient>
+            </defs>
+            <g className="signal-guides">
+              <path d="M70 120H550M70 240H550M70 360H550M70 480H550M120 80V520M240 80V520M360 80V520M480 80V520" />
+            </g>
+            <path className="signal-ghost" d="M50 310H166C242 310 225 455 322 455H548" />
+            <path className="signal-secondary" d="M50 310H170C252 310 247 330 335 330H548" />
+            <path className="signal-main" d="M50 310H170C246 310 232 165 328 165H548" />
+            <path className="signal-fracture-shadow" d="m319 76-49 119 43 69-44 88 47 84-31 87" />
+            <path className="signal-fracture" d="m319 76-49 119 43 69-44 88 47 84-31 87" />
+            <g className="signal-terminals">
+              <circle cx="170" cy="310" r="8" />
+              <circle cx="548" cy="165" r="6" />
+              <circle cx="548" cy="330" r="4" />
+              <circle cx="548" cy="455" r="4" />
+            </g>
+            <path className="signal-bracket" d="M80 90H60V110M520 510H540V490" />
+          </svg>
           <div className="art-node node-a">
             <span /> OBSERVE
           </div>
@@ -71,7 +86,7 @@ export default function Home() {
             <span /> ATTEST
           </div>
           <div className="art-coordinate coord-bottom">
-            ILLUSTRATIVE GEOMETRY
+            ILLUSTRATIVE SIGNAL STUDY
             <br />
             NO PREDICTED PROBABILITIES
           </div>
@@ -97,7 +112,7 @@ export default function Home() {
         <div className="steps">
           <article>
             <ScanLine />
-            <span className="mono gold">OBSERVE /</span>
+            <span className="mono accent">OBSERVE /</span>
             <h3>Interrogate the action.</h3>
             <p>
               Decode calldata. Inspect real chain state. Run the exact proposed call. See what is
@@ -107,7 +122,7 @@ export default function Home() {
           </article>
           <article>
             <Fingerprint />
-            <span className="mono gold">CHALLENGE /</span>
+            <span className="mono accent">CHALLENGE /</span>
             <h3>Put identity behind dissent.</h3>
             <p>
               Agent ID holders publish capsules and challenge assumptions. Blind reviews reduce
@@ -117,7 +132,7 @@ export default function Home() {
           </article>
           <article>
             <Radar />
-            <span className="mono gold">REMEMBER /</span>
+            <span className="mono accent">REMEMBER /</span>
             <h3>Leave a flight recorder.</h3>
             <p>
               Every review has an author. Every verdict has evidence. Export an independently
@@ -132,7 +147,7 @@ export default function Home() {
         <h2>
           PROOF BEFORE ACTION.
           <br />
-          <span className="gold">AUTHORITY STAYS WITH YOU.</span>
+          <span className="accent">AUTHORITY STAYS WITH YOU.</span>
         </h2>
         <div>
           <p>

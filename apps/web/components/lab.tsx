@@ -152,7 +152,7 @@ export function Lab() {
             <br />
             IS A VALID
             <br />
-            <span className="gold">ANSWER.</span>
+            <span className="accent">ANSWER.</span>
           </h2>
           <p>
             We decode known selectors and ask the chain about the exact proposed call. Source
@@ -171,7 +171,7 @@ export function Lab() {
             <div>
               <span>$</span> eth_estimateGas <b>EXACT INPUT</b>
             </div>
-            <div className="gold">NO SIGNATURE REQUESTED_</div>
+            <div className="accent">NO SIGNATURE REQUESTED_</div>
           </div>
           <Notice>
             Selector matches describe expected ABI shapes. They do not prove that a target

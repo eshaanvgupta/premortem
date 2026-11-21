@@ -1,7 +1,7 @@
 pnpm.cmd : $ node scripts/protocol-e2e.mjs
-At line:2 char:98
-+ ... ow.spec.ts; pnpm.cmd test:protocol *> artifacts/protocol-run.txt; Get ...
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At line:2 char:58
++ ... lobals.css; pnpm.cmd test:protocol *> .tools/redesign-protocol.txt; G ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: ($ node scripts/protocol-e2e.mjs:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
@@ -31,7 +31,7 @@ Ran 69 tests for test/PremortemRegistry.t.sol:PremortemRegistryTest
 [PASS] testFinalizeOnce() (gas: 263483)
 [PASS] testFuzzBadQuorum(uint8) (runs: 256, μ: 30557, ~: 39196)
 [PASS] testFuzzCommitmentBinding(uint256,address,uint8,uint8,bytes32,uint8,bytes32) (runs: 256, μ: 13603, ~: 13603)
-[PASS] testFuzzValidReview(uint8,uint8,uint8) (runs: 256, μ: 282389, ~: 282394)
+[PASS] testFuzzValidReview(uint8,uint8,uint8) (runs: 256, μ: 282387, ~: 282394)
 [PASS] testHashActionDomain() (gas: 13206)
 [PASS] testHashActionMatchesTypeScriptVector() (gas: 6748)
 [PASS] testIdentityCommit() (gas: 231625)
@@ -77,7 +77,7 @@ Ran 69 tests for test/PremortemRegistry.t.sol:PremortemRegistryTest
 [PASS] testZeroCapsuleHash() (gas: 37912)
 [PASS] testZeroCommitHash() (gas: 239283)
 [PASS] testZeroReviewHash() (gas: 239873)
-Suite result: ok. 69 passed; 0 failed; 0 skipped; finished in 15.25ms (34.69ms CPU time)
+Suite result: ok. 69 passed; 0 failed; 0 skipped; finished in 13.40ms (29.15ms CPU time)
 
 Ran 1 test for test/PremortemRegistry.t.sol:PremortemInvariantTest
 [PASS]
@@ -91,27 +91,27 @@ PremortemInvariantTest invariants:
 ╭---------------+----------+-------+---------+----------╮
 | Contract      | Selector | Calls | Reverts | Discards |
 +=======================================================+
-| ReviewHandler | finish   | 2045  | 0       | 0        |
+| ReviewHandler | finish   | 2023  | 0       | 0        |
 |---------------+----------+-------+---------+----------|
-| ReviewHandler | review   | 2051  | 0       | 0        |
+| ReviewHandler | review   | 2073  | 0       | 0        |
 ╰---------------+----------+-------+---------+----------╯
 
-Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 234.46ms (227.09ms CPU time)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 227.53ms (221.07ms CPU time)
 
-Ran 2 test suites in 239.74ms (249.71ms CPU time): 70 tests passed, 0 failed, 0 skipped (70 total tests)
+Ran 2 test suites in 246.98ms (240.93ms CPU time): 70 tests passed, 0 failed, 0 skipped (70 total tests)
 ▲ Next.js 16.4.6 (webpack)
 ✓ Running next.config.ts took 27ms
 
   Creating an optimized production build ...
-✓ Compiled successfully in 6.7s
+✓ Compiled successfully in 7.1s
   Running TypeScript ...
-  Finished TypeScript in 2.7s ...
-  Collecting page data using 14 workers ...
-  Generating static pages using 14 workers (0/12) ...
-  Generating static pages using 14 workers (3/12) 
-  Generating static pages using 14 workers (6/12) 
-  Generating static pages using 14 workers (9/12) 
-✓ Generating static pages using 14 workers (12/12) in 1099ms
+  Finished TypeScript in 3.4s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/13) ...
+  Generating static pages using 15 workers (3/13) 
+  Generating static pages using 15 workers (6/13) 
+  Generating static pages using 15 workers (9/13) 
+✓ Generating static pages using 15 workers (13/13) in 1179ms
   Finalizing page optimization ...
   Collecting build traces ...
 
@@ -122,6 +122,7 @@ Route (app)
 ├ ○ /arena
 ├ ƒ /arena/[id]
 ├ ○ /developers
+├ ○ /icon.svg
 ├ ○ /lab
 ├ ○ /me
 ├ ○ /proof
@@ -136,13 +137,13 @@ Route (app)
 ▲ Next.js 16.4.6
 - Local:         http://127.0.0.1:3100
 - Network:       http://127.0.0.1:3100
-✓ Ready in 292ms
-✓ Running next.config.ts took 39ms
+✓ Ready in 269ms
+✓ Running next.config.ts took 34ms
 
 Running 1 test using 1 worker
 
-(node:25044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:22660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ok 1 tests\protocol\workflow.spec.ts:42:1 › real isolated EVM: create, independent open review, finalize, verify receipt, blind commit and reveal (35.6s)
+  ok 1 tests\protocol\workflow.spec.ts:42:1 › real isolated EVM: create, independent open review, finalize, verify receipt, blind commit and reveal (35.7s)
 
-  1 passed (38.0s)
+  1 passed (37.1s)
