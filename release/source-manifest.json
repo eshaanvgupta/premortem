@@ -190,8 +190,8 @@
     },
     {
       "path": "apps/web/components/shell.tsx",
-      "bytes": 7111,
-      "sha256": "01660482f1375b5dcc1a26c6a512028e419baf8e8fbf548b101956e448fde82e"
+      "bytes": 7280,
+      "sha256": "b24c0a4898420b1cf81ac2309c3de9a8a36151942d6e093461d64d99421044e4"
     },
     {
       "path": "apps/web/components/ui.tsx",
@@ -250,18 +250,18 @@
     },
     {
       "path": "artifacts/build.txt",
-      "bytes": 1601,
-      "sha256": "f4ce7edfab13a7e8823e05979e8c70e05deddf628e8fed64d1b953b79ec799c0"
+      "bytes": 1551,
+      "sha256": "c22e50d9578f27257e0af37fd23b9a382e683c66e416dee5f9ae5cda600358dc"
     },
     {
       "path": "artifacts/docker-build-before-csp-fix.txt",
-      "bytes": 15414,
-      "sha256": "a6ed50d8e0dc71d32545215aa9b394bff528515312482a00ca6a9a8344c56fa9"
+      "bytes": 15411,
+      "sha256": "4718d0e7cf41da74ab1cabbf689132e4e5aeb8ab653f8388a15fa871e84c1508"
     },
     {
       "path": "artifacts/docker-build-before-rpc-fallback.txt",
-      "bytes": 4457,
-      "sha256": "fe2086e035db6dbfc858570f2d16f6ad674ad40fcf7b3ab785c15a311a051b24"
+      "bytes": 4454,
+      "sha256": "fe1483c0b0f9bb664c20b33142bb6a8ef548df8c264231136d0fdd6e24482ee4"
     },
     {
       "path": "artifacts/docker-build-context-rejected.txt",
@@ -270,8 +270,8 @@
     },
     {
       "path": "artifacts/docker-build.txt",
-      "bytes": 4436,
-      "sha256": "7a27de1503a192ed0f766f94273ff43691e05893e4f74afa83f3e072bac6e9b1"
+      "bytes": 4433,
+      "sha256": "ce4455ed990455b7ddc08e3fb59b867d9c011655ea0fa5eddfb437f41237615d"
     },
     {
       "path": "artifacts/docker-health.mjs",
@@ -285,13 +285,13 @@
     },
     {
       "path": "artifacts/format.txt",
-      "bytes": 4553,
-      "sha256": "9c5b08ba6a2c0d8dc483b267fa76054766b3497956843a6a11ce76e92257d51a"
+      "bytes": 4444,
+      "sha256": "cde0214591789242a3ee0a80a0543f7c155de59fb9dc6f06b032a336941dfa29"
     },
     {
       "path": "artifacts/gas-snapshot-check.txt",
-      "bytes": 4439,
-      "sha256": "3e5b85fb6ed4d8d0727c639c8cb786106f4ee91881c4ddd58fd94514d33a5554"
+      "bytes": 4345,
+      "sha256": "28abd4be82d2a99de96b8a20348b7720e9a088624514d11eb28daf2de7774207"
     },
     {
       "path": "artifacts/lighthouse.html",
@@ -305,8 +305,8 @@
     },
     {
       "path": "artifacts/playwright-results.json",
-      "bytes": 33851,
-      "sha256": "4203146c756a098b679128788e30174c0caca4c4d547db5990bb6e7e0a0c50ed"
+      "bytes": 33846,
+      "sha256": "f2033eeccfeb175ec82a13bc7a20cfde56c39ed4cb62e53ea5c0d580dd968f55"
     },
     {
       "path": "artifacts/protocol-playwright-results.json",
@@ -315,8 +315,8 @@
     },
     {
       "path": "artifacts/protocol-run.txt",
-      "bytes": 6274,
-      "sha256": "842097abfe1afc4ef92a582a72023e6378d587e8e4a0be0d2e2913d43f8909ae"
+      "bytes": 6126,
+      "sha256": "dd758d553d87ef248b8aff784580fc91567327577b0bc568aa1ce03eee14d696"
     },
     {
       "path": "artifacts/screenshots/home-desktop.png",
@@ -450,8 +450,8 @@
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 8839,
-      "sha256": "94a7442dab1856523268fabeff278e3f2bc736cc0191220c56d3a0d76c643289"
+      "bytes": 8997,
+      "sha256": "9a87bf5d4931eafb7f295b16fdffa7388049d1d66d831f38d90c8b2923aa633b"
     },
     {
       "path": "docs/VERIFY_DEPLOYMENT.md",
@@ -795,8 +795,8 @@
     },
     {
       "path": "tests/e2e/public.spec.ts",
-      "bytes": 6732,
-      "sha256": "79567d0f6da768847e6928566dd66f1d96c002a0d595d0922878ca5f7c7ec60d"
+      "bytes": 6812,
+      "sha256": "1d17cd5cb25a13c12f74cedc3b4adc9c8f7d613a6e223d7cc0b730ecd4d5f58c"
     },
     {
       "path": "tests/local-chain.mjs",

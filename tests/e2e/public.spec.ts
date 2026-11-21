@@ -37,6 +37,7 @@ test('empty arena has no fabricated capsule cards', async ({ page }) => {
 });
 test('keyboard command palette and reduced motion', async ({ page }) => {
   await page.goto('/');
+  await expect(page.locator('.site')).toHaveAttribute('data-hydrated', 'true');
   await page.keyboard.press('Control+k');
   await expect(page.getByRole('dialog', { name: 'Command palette' })).toBeVisible();
   await page.keyboard.press('Escape');

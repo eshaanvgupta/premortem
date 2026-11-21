@@ -36,6 +36,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const [menu, setMenu] = useState(false);
   const [command, setCommand] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
   const reduced = usePreferences((s) => s.reduced);
   const toggle = usePreferences((s) => s.toggleReduced);
   useEffect(() => {
@@ -50,6 +51,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       }
     };
     window.addEventListener('keydown', handler);
+    setHydrated(true);
     return () => window.removeEventListener('keydown', handler);
   }, []);
   useEffect(() => {
@@ -78,7 +80,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   }, [command]);
   return (
     <QueryClientProvider client={client}>
-      <div className={reduced ? 'site reduce' : 'site'}>
+      <div className={reduced ? 'site reduce' : 'site'} data-hydrated={hydrated}>
         <a href="#main" className="skip">
           Skip to content
         </a>
@@ -106,6 +108,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               className="icon-button command-trigger"
               onClick={() => setCommand(true)}
               aria-label="Open command palette"
+              disabled={!hydrated}
             >
               <Command size={17} />
               <kbd>K</kbd>
@@ -117,6 +120,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               className="icon-button mobile-menu"
               onClick={() => setMenu(!menu)}
               aria-label={menu ? 'Close menu' : 'Open menu'}
+              disabled={!hydrated}
             >
               {menu ? <X /> : <Menu />}
             </button>
